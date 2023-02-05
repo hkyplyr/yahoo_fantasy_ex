@@ -1,0 +1,19 @@
+{
+    "stat": {
+        "stat_id": 1,
+        "enabled": "1",
+        "name": "Goals",
+        "display_name": "G",
+        "group": "offense",
+        "abbr": "G",
+        "sort_order": "1",
+        "position_type": "P",
+        "stat_position_types": [
+            {
+                "stat_position_type": {
+                    "position_type": "P"
+                }
+            }
+        ]
+    }
+}

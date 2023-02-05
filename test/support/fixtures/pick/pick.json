@@ -1,0 +1,11 @@
+{
+    "pick": {
+        "source_team_key": "419.l.6738.t.1",
+        "source_team_name": "Team One",
+        "destination_team_key": "419.l.6738.t.2",
+        "destination_team_name": "Team Two",
+        "original_team_key": "419.l.6738.t.1",
+        "original_team_name": "Team One",
+        "round": "1"
+    }
+}

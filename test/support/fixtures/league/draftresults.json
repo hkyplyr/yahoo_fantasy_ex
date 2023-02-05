@@ -1,0 +1,105 @@
+{
+    "0": {
+        "draft_result": {
+            "pick": 1,
+            "round": 1,
+            "team_key": "419.l.6738.t.7",
+            "player_key": "419.p.6743"
+        }
+    },
+    "1": {
+        "draft_result": {
+            "pick": 2,
+            "round": 1,
+            "team_key": "419.l.6738.t.12",
+            "player_key": "419.p.7519",
+            "0": {
+                "players": {
+                    "0": {
+                        "player": [
+                            [
+                                {
+                                    "player_key": "419.p.7519"
+                                },
+                                {
+                                    "player_id": "7519"
+                                },
+                                {
+                                    "name": {
+                                        "full": "Cale Makar",
+                                        "first": "Cale",
+                                        "last": "Makar",
+                                        "ascii_first": "Cale",
+                                        "ascii_last": "Makar"
+                                    }
+                                },
+                                {
+                                    "url": "https:\/\/sports.yahoo.com\/nhl\/players\/7519"
+                                },
+                                {
+                                    "editorial_player_key": "nhl.p.7519"
+                                },
+                                {
+                                    "editorial_team_key": "nhl.t.17"
+                                },
+                                {
+                                    "editorial_team_full_name": "Colorado Avalanche"
+                                },
+                                {
+                                    "editorial_team_abbr": "COL"
+                                },
+                                {
+                                    "editorial_team_url": "https:\/\/sports.yahoo.com\/nhl\/teams\/colorado\/"
+                                },
+                                {
+                                    "is_keeper": {
+                                        "status": false,
+                                        "cost": "",
+                                        "kept": false
+                                    }
+                                },
+                                {
+                                    "uniform_number": "8"
+                                },
+                                {
+                                    "display_position": "D"
+                                },
+                                {
+                                    "headshot": {
+                                        "url": "https:\/\/s.yimg.com\/iu\/api\/res\/1.2\/vbdXh0lQqmIljyEW6iQ62w--~C\/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2\/https:\/\/s.yimg.com\/xe\/i\/us\/sp\/v\/nhl_cutout\/players_l\/10252022\/7519.png",
+                                        "size": "small"
+                                    },
+                                    "image_url": "https:\/\/s.yimg.com\/iu\/api\/res\/1.2\/vbdXh0lQqmIljyEW6iQ62w--~C\/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2\/https:\/\/s.yimg.com\/xe\/i\/us\/sp\/v\/nhl_cutout\/players_l\/10252022\/7519.png"
+                                },
+                                {
+                                    "is_undroppable": "0"
+                                },
+                                {
+                                    "position_type": "P"
+                                },
+                                {
+                                    "primary_position": "D"
+                                },
+                                {
+                                    "eligible_positions": [
+                                        {
+                                            "position": "D"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "has_player_notes": 1
+                                },
+                                [],
+                                {
+                                    "player_notes_last_timestamp": 1675004031
+                                }
+                            ]
+                        ]
+                    },
+                    "count": 1
+                }
+            }
+        }
+    }
+}

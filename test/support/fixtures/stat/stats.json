@@ -1,0 +1,34 @@
+{
+    "stats": [
+        {
+            "stat": {
+                "stat_id": "19",
+                "value": "8"
+            }
+        },
+        {
+            "stat": {
+                "stat_id": "20",
+                "value": "6"
+            }
+        },
+        {
+            "stat": {
+                "stat_id": "22",
+                "value": "45"
+            }
+        },
+        {
+            "stat": {
+                "stat_id": "25",
+                "value": "507"
+            }
+        },
+        {
+            "stat": {
+                "stat_id": "27",
+                "value": "1"
+            }
+        }
+    ]
+}
