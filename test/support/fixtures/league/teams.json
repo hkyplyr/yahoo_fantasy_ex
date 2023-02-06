@@ -168,7 +168,7 @@
                 "team_remaining_games": {
                     "coverage_type": "season",
                     "season": "2022",
-                    "total": "-"
+                    "remaining_games": "-"
                 },
                 "team_points": {
                     "coverage_type": "season",

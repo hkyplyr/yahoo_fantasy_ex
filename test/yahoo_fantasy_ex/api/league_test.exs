@@ -94,6 +94,30 @@ defmodule YahooFantasyEx.Api.LeagueTest do
     end
   end
 
+  describe "scoreboard/2" do
+    test "sends correct request for the scoreboard endpoint" do
+      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
+        assert String.contains?(url, @league_key)
+        assert String.contains?(url, "/scoreboard")
+
+        %HttpResponse{body: response_body()}
+      end)
+
+      assert %LeagueModel{} = League.scoreboard(@league_key)
+    end
+
+    test "sends correct request for the scoreboard endpoint with week param" do
+      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
+        assert String.contains?(url, @league_key)
+        assert String.contains?(url, "/scoreboard;week=1,2,3")
+
+        %HttpResponse{body: response_body()}
+      end)
+
+      assert %LeagueModel{} = League.scoreboard(@league_key, weeks: [1, 2, 3])
+    end
+  end
+
   defp response_body do
     Jason.encode!(%{"fantasy_content" => %{"league" => load_fixture("league/metadata.json")}})
   end

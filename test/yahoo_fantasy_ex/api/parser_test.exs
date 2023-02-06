@@ -6,6 +6,7 @@ defmodule YahooFantasyEx.Api.ParserTest do
   alias YahooFantasyEx.Models.League
   alias YahooFantasyEx.Models.League.DraftResult
   alias YahooFantasyEx.Models.League.Settings
+  alias YahooFantasyEx.Models.Matchup
   alias YahooFantasyEx.Models.Player
   alias YahooFantasyEx.Models.Team
   alias YahooFantasyEx.Models.Transaction
@@ -52,6 +53,12 @@ defmodule YahooFantasyEx.Api.ParserTest do
       json = %{"draft_results" => load_fixture("league/draftresults.json")}
 
       assert {:draft_results, [%DraftResult{}, %DraftResult{}]} = Parser.parse_subresource(json)
+    end
+
+    test "parse scoreboard correctly" do
+      json = %{"scoreboard" => %{"0" => %{"matchups" => load_fixture("league/scoreboard.json")}}}
+
+      assert {:scoreboard, [%Matchup{}, %Matchup{}]} = Parser.parse_subresource(json)
     end
   end
 end

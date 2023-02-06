@@ -4,6 +4,7 @@ defmodule YahooFantasyEx.Api.Parser do
   alias YahooFantasyEx.Models.League
   alias YahooFantasyEx.Models.League.DraftResult
   alias YahooFantasyEx.Models.League.Settings
+  alias YahooFantasyEx.Models.Matchup
   alias YahooFantasyEx.Models.Player
   alias YahooFantasyEx.Models.Team
   alias YahooFantasyEx.Models.Transaction
@@ -18,6 +19,7 @@ defmodule YahooFantasyEx.Api.Parser do
   @type subresource ::
           Settings.t()
           | [DraftResult.t()]
+          | [Matchup.t()]
           | [Player.t()]
           | [Team.t()]
           | [Transaction.t()]
@@ -41,6 +43,10 @@ defmodule YahooFantasyEx.Api.Parser do
 
   def parse_subresource(%{"transactions" => transactions}) do
     {:transactions, parse_valid_entities(transactions, &Transaction.new/1)}
+  end
+
+  def parse_subresource(%{"scoreboard" => %{"0" => %{"matchups" => matchups}}}) do
+    {:scoreboard, parse_valid_entities(matchups, &Matchup.new/1)}
   end
 
   defp parse_valid_entities(entities, constructor) do

@@ -74,7 +74,9 @@ defmodule YahooFantasyEx.Models.Team do
   defp parse_points(%{"total" => total_points}), do: cast_float(total_points)
   defp parse_points(_), do: nil
 
-  defp parse_remaining_games(%{"total" => remaining_games}), do: cast_integer(remaining_games)
+  defp parse_remaining_games(%{"remaining_games" => remaining_games}),
+    do: cast_integer(remaining_games)
+
   defp parse_remaining_games(_), do: nil
 
   defp extract_team_logo([%{"team_logo" => %{"url" => url}}]), do: url

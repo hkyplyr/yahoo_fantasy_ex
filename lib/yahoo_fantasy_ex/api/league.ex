@@ -33,6 +33,20 @@ defmodule YahooFantasyEx.Api.League do
     get("/league/#{league_key}/transactions")
   end
 
+  @spec scoreboard(String.t(), Keyword.t()) :: League.t()
+  def scoreboard(league_key, opts \\ []) do
+    weeks_param =
+      case Keyword.get(opts, :weeks) do
+        weeks when is_list(weeks) ->
+          ";week=#{Enum.join(weeks, ",")}"
+
+        nil ->
+          ""
+      end
+
+    get("/league/#{league_key}/scoreboard#{weeks_param}")
+  end
+
   @spec draft_results(String.t(), Keyword.t()) :: League.t()
   def draft_results(league_key, opts \\ []) do
     include_players? = Keyword.get(opts, :include_players?, false)

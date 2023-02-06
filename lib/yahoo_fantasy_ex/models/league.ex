@@ -37,7 +37,8 @@ defmodule YahooFantasyEx.Models.League do
     draft_results: [],
     players: [],
     teams: [],
-    transactions: []
+    transactions: [],
+    scoreboard: []
   ]
 
   @type t :: %__MODULE__{

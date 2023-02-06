@@ -18,6 +18,8 @@ defmodule YahooFantasyEx do
       alias YahooFantasyEx.Models.League.Settings.StatCategory
       alias YahooFantasyEx.Models.League.Settings.StatModifier
       alias YahooFantasyEx.Models.Manager
+      alias YahooFantasyEx.Models.Matchup
+      alias YahooFantasyEx.Models.Matchup.StatWinner
       alias YahooFantasyEx.Models.Player
       alias YahooFantasyEx.Models.Player.Stat
       alias YahooFantasyEx.Models.Team
