@@ -20,7 +20,7 @@ defmodule YahooFantasyEx.Api.League do
     start = Keyword.get(opts, :start, 0)
     count = Keyword.get(opts, :count, 25)
 
-    get("/league/#{league_key}/players/stats;start=#{start};count=#{count}")
+    get("/league/#{league_key}/players;start=#{start};count=#{count}/stats")
   end
 
   @spec settings(String.t()) :: League.t()

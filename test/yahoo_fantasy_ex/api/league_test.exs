@@ -46,7 +46,7 @@ defmodule YahooFantasyEx.Api.LeagueTest do
     test "sends correct request for the players endpoint" do
       expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
         assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/players/stats;start=0;count=25")
+        assert String.contains?(url, "/players;start=0;count=25/stats")
 
         %HttpResponse{body: response_body()}
       end)
