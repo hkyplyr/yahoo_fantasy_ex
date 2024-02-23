@@ -1,4 +1,5 @@
 # YahooFantasyEx
+[![CI](https://github.com/hkyplyr/yahoo_fantasy_ex/actions/workflows/main.yml/badge.svg)](https://github.com/hkyplyr/yahoo_fantasy_ex/actions/workflows/main.yml)
 
 **TODO: Add description**
 
