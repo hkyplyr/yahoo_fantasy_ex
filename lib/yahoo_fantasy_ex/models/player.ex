@@ -50,7 +50,7 @@ defmodule YahooFantasyEx.Models.Player do
           player_notes_last_timestamp: integer() | nil,
           position_type: atom(),
           primary_position: atom(),
-          status: atom(),
+          status: atom() | nil,
           status_full: String.t(),
           uniform_number: integer() | nil,
           url: String.t()
