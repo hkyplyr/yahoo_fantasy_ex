@@ -42,6 +42,7 @@ defmodule YahooFantasyEx.Models.HelpersTest do
       assert Helpers.cast_float("-") == nil
       assert Helpers.cast_float("1") == 1.0
       assert Helpers.cast_float(1.0) == 1.0
+      assert Helpers.cast_float(0) == 0.0
     end
   end
 
@@ -72,7 +73,7 @@ defmodule YahooFantasyEx.Models.HelpersTest do
       assert Helpers.translate_status("O") == :out
       assert Helpers.translate_status("DTD") == :day_to_day
       assert Helpers.translate_status("IR-NR") == :non_roster_injured_reserve
-      assert Helpers.translate_status(nil) == :invalid
+      assert Helpers.translate_status(nil) == nil
     end
   end
 

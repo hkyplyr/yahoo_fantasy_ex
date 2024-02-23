@@ -26,6 +26,7 @@ defmodule YahooFantasyEx.Models.Helpers do
   @spec cast_float(term()) :: float() | nil
   def cast_float(value) when value in @nil_values, do: nil
   def cast_float(value) when is_float(value), do: value
+  def cast_float(value) when is_integer(value), do: value * 1.0
 
   def cast_float(value) when is_binary(value) do
     case Float.parse(value) do
