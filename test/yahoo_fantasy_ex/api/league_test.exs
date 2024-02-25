@@ -4,25 +4,18 @@ defmodule YahooFantasyEx.Api.LeagueTest do
 
   import Mox
 
-  alias HTTPoison.Response, as: HttpResponse
-
   alias YahooFantasyEx.Api.League
   alias YahooFantasyEx.Models.League, as: LeagueModel
   alias YahooFantasyEx.Tokens.ManagerMock
 
-  setup :verify_on_exit!
-
-  setup :expect_tokens
+  setup [:verify_on_exit!, :setup_bypass, :expect_tokens]
 
   @league_key "nhl.l.12345"
 
   describe "info/1" do
-    test "sends correct request for the metadata ednpoint" do
-      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
-        assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/metadata")
-
-        %HttpResponse{body: response_body()}
+    test "sends correct request for the metadata ednpoint", ctx do
+      Bypass.expect(ctx.bypass, "GET", "/league/nhl.l.12345/metadata", fn conn ->
+        Plug.Conn.send_resp(conn, 200, response_body())
       end)
 
       assert %LeagueModel{} = League.info(@league_key)
@@ -30,12 +23,9 @@ defmodule YahooFantasyEx.Api.LeagueTest do
   end
 
   describe "teams/1" do
-    test "sends correct request for the teams endpoint" do
-      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
-        assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/teams/stats")
-
-        %HttpResponse{body: response_body()}
+    test "sends correct request for the teams endpoint", ctx do
+      Bypass.expect(ctx.bypass, "GET", "/league/nhl.l.12345/teams/stats", fn conn ->
+        Plug.Conn.send_resp(conn, 200, response_body())
       end)
 
       assert %LeagueModel{} = League.teams(@league_key)
@@ -43,25 +33,24 @@ defmodule YahooFantasyEx.Api.LeagueTest do
   end
 
   describe "players/2" do
-    test "sends correct request for the players endpoint" do
-      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
-        assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/players;start=0;count=25/stats")
-
-        %HttpResponse{body: response_body()}
-      end)
+    test "sends correct request for the players endpoint", ctx do
+      Bypass.expect(
+        ctx.bypass,
+        "GET",
+        "/league/nhl.l.12345/players;start=0;count=25/stats",
+        fn conn ->
+          Plug.Conn.send_resp(conn, 200, response_body())
+        end
+      )
 
       assert %LeagueModel{} = League.players(@league_key)
     end
   end
 
   describe "settings/1" do
-    test "sends correct request for the settings endpoint" do
-      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
-        assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/settings")
-
-        %HttpResponse{body: response_body()}
+    test "sends correct request for the settings endpoint", ctx do
+      Bypass.expect(ctx.bypass, "GET", "/league/nhl.l.12345/settings", fn conn ->
+        Plug.Conn.send_resp(conn, 200, response_body())
       end)
 
       assert %LeagueModel{} = League.settings(@league_key)
@@ -69,12 +58,9 @@ defmodule YahooFantasyEx.Api.LeagueTest do
   end
 
   describe "transactions/1" do
-    test "sends correct request for the transactions endpoint" do
-      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
-        assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/transactions")
-
-        %HttpResponse{body: response_body()}
+    test "sends correct request for the transactions endpoint", ctx do
+      Bypass.expect(ctx.bypass, "GET", "/league/nhl.l.12345/transactions", fn conn ->
+        Plug.Conn.send_resp(conn, 200, response_body())
       end)
 
       assert %LeagueModel{} = League.transactions(@league_key)
@@ -82,12 +68,9 @@ defmodule YahooFantasyEx.Api.LeagueTest do
   end
 
   describe "draft_results/2" do
-    test "sends correct request for the draftresults endpoint" do
-      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
-        assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/draftresults")
-
-        %HttpResponse{body: response_body()}
+    test "sends correct request for the draftresults endpoint", ctx do
+      Bypass.expect(ctx.bypass, "GET", "/league/nhl.l.12345/draftresults", fn conn ->
+        Plug.Conn.send_resp(conn, 200, response_body())
       end)
 
       assert %LeagueModel{} = League.draft_results(@league_key)
@@ -95,23 +78,17 @@ defmodule YahooFantasyEx.Api.LeagueTest do
   end
 
   describe "scoreboard/2" do
-    test "sends correct request for the scoreboard endpoint" do
-      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
-        assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/scoreboard")
-
-        %HttpResponse{body: response_body()}
+    test "sends correct request for the scoreboard endpoint", ctx do
+      Bypass.expect(ctx.bypass, "GET", "/league/nhl.l.12345/scoreboard", fn conn ->
+        Plug.Conn.send_resp(conn, 200, response_body())
       end)
 
       assert %LeagueModel{} = League.scoreboard(@league_key)
     end
 
-    test "sends correct request for the scoreboard endpoint with week param" do
-      expect(HTTPoison.BaseMock, :get!, fn url, _, _ ->
-        assert String.contains?(url, @league_key)
-        assert String.contains?(url, "/scoreboard;week=1,2,3")
-
-        %HttpResponse{body: response_body()}
+    test "sends correct request for the scoreboard endpoint with week param", ctx do
+      Bypass.expect(ctx.bypass, "GET", "/league/nhl.l.12345/scoreboard;week=1,2,3", fn conn ->
+        Plug.Conn.send_resp(conn, 200, response_body())
       end)
 
       assert %LeagueModel{} = League.scoreboard(@league_key, weeks: [1, 2, 3])
@@ -121,6 +98,8 @@ defmodule YahooFantasyEx.Api.LeagueTest do
   defp response_body do
     Jason.encode!(%{"fantasy_content" => %{"league" => load_fixture("league/metadata.json")}})
   end
+
+  defp setup_bypass(_), do: [bypass: Bypass.open(port: 7997)]
 
   defp expect_tokens(_) do
     expires_by =

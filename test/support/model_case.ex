@@ -13,6 +13,6 @@ defmodule YahooFantasyEx.ModelCase do
   def load_fixture(file_name) do
     "test/support/fixtures/#{file_name}"
     |> File.read!()
-    |> Poison.Parser.parse!()
+    |> Jason.decode!()
   end
 end

@@ -1,14 +1,19 @@
 defmodule YahooFantasyEx.AuthTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   import Mox
-
-  alias HTTPoison.Response, as: HttpResponse
 
   alias YahooFantasyEx.Auth
   alias YahooFantasyEx.Tokens.ManagerMock
 
   setup :verify_on_exit!
+
+  setup do
+    [
+      authorize_bypass: Bypass.open(port: 7998),
+      token_bypass: Bypass.open(port: 7999)
+    ]
+  end
 
   describe "get_access_token/0" do
     doctest YahooFantasyEx.Auth, only: [get_access_token: 0]
@@ -26,17 +31,33 @@ defmodule YahooFantasyEx.AuthTest do
     end
 
     @tag expected_state: :error
-    test "retrieves access token from server when one does not exist" do
+    test "retrieves access token from server when one does not exist", ctx do
+      Bypass.stub(ctx.authorize_bypass, "GET", "/", fn conn ->
+        conn = Plug.Conn.put_resp_header(conn, "Location", "location")
+        Plug.Conn.send_resp(conn, 200, "")
+      end)
+
+      Bypass.stub(ctx.token_bypass, "POST", "/", fn conn ->
+        Plug.Conn.send_resp(conn, 200, tokens(:new))
+      end)
+
       expect(ManagerMock, :write, fn _ -> :ok end)
-      expect(HTTPoison.BaseMock, :post!, fn _, _ -> %HttpResponse{body: tokens(:new)} end)
 
       assert "new_token" == Auth.get_access_token()
     end
 
     @tag expected_state: :expired
-    test "returns a refreshed access token when existing tokens are expired" do
+    test "returns a refreshed access token when existing tokens are expired", ctx do
       expect(ManagerMock, :write, fn _ -> :ok end)
-      expect(HTTPoison.BaseMock, :post!, fn _, _ -> %HttpResponse{body: tokens(:refreshed)} end)
+
+      Bypass.stub(ctx.authorize_bypass, "GET", "/", fn conn ->
+        conn = Plug.Conn.put_resp_header(conn, "Location", "location")
+        Plug.Conn.send_resp(conn, 200, "")
+      end)
+
+      Bypass.stub(ctx.token_bypass, "POST", "/", fn conn ->
+        Plug.Conn.send_resp(conn, 200, tokens(:refreshed))
+      end)
 
       assert "refreshed_token" == Auth.get_access_token()
     end

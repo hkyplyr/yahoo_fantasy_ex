@@ -1,11 +1,6 @@
 defmodule YahooFantasyEx.Auth do
   @moduledoc false
 
-  import HTTPoison
-
-  @authorize_url "https://api.login.yahoo.com/oauth2/request_auth"
-  @token_url "https://api.login.yahoo.com/oauth2/get_token"
-
   defp client_id, do: System.get_env("CLIENT_ID")
   defp client_secret, do: System.get_env("CLIENT_SECRET")
 
@@ -25,7 +20,7 @@ defmodule YahooFantasyEx.Auth do
           "access_token" => access_token,
           "refresh_token" => refresh_token,
           "expires_by" => expires_by
-        } = Poison.decode!(binary)
+        } = Jason.decode!(binary)
 
         if DateTime.to_unix(DateTime.utc_now()) > expires_by - 300 do
           refresh_tokens(refresh_token)
@@ -44,11 +39,11 @@ defmodule YahooFantasyEx.Auth do
           {:grant_type, :authorization_code}
         ]
 
-        %HTTPoison.Response{body: body} = http_client().post!(@token_url, {:form, data})
+        %Req.Response{body: body} = Req.post!(url: token_url(), form: data)
 
         updated =
           body
-          |> Poison.decode!()
+          |> Jason.decode!()
           |> put_expires_by()
 
         token_manager().write(updated)
@@ -66,11 +61,11 @@ defmodule YahooFantasyEx.Auth do
       {:grant_type, :refresh_token}
     ]
 
-    %HTTPoison.Response{body: body} = http_client().post!(@token_url, {:form, data})
+    %Req.Response{body: body} = Req.post!(url: token_url(), form: data)
 
     updated =
       body
-      |> Poison.decode!()
+      |> Jason.decode!()
       |> put_expires_by()
 
     token_manager().write(updated)
@@ -94,16 +89,14 @@ defmodule YahooFantasyEx.Auth do
     |> String.trim()
   end
 
-  defp get_location(params, headers) do
-    @authorize_url
-    |> get!(headers, params: params)
-    |> Map.get(:headers)
-    |> Enum.find(&find_location/1)
-    |> elem(1)
+  defp get_location(params, request_headers) do
+    %Req.Response{headers: response_headers} =
+      Req.get!(url: authorize_url(), headers: request_headers, params: params)
+
+    response_headers
+    |> Enum.find_value(fn {k, v} -> if k == "location", do: v end)
     |> io().puts()
   end
-
-  defp find_location({k, _}), do: k == "Location"
 
   defp put_expires_by(%{"expires_in" => expires_in} = token_response) do
     expires_by =
@@ -118,11 +111,10 @@ defmodule YahooFantasyEx.Auth do
     Application.get_env(:yahoo_fantasy_ex, :io, IO)
   end
 
-  defp http_client do
-    Application.get_env(:yahoo_fantasy_ex, :http_client, HTTPoison)
-  end
-
   defp token_manager do
     Application.get_env(:yahoo_fantasy_ex, :token_manager, YahooFantasyEx.Tokens.File)
   end
+
+  defp authorize_url, do: Application.get_env(:yahoo_fantasy_ex, :authorize_url)
+  defp token_url, do: Application.get_env(:yahoo_fantasy_ex, :token_url)
 end

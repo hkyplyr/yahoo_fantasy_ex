@@ -10,7 +10,7 @@ defmodule YahooFantasyEx.Tokens.File do
 
   def write(value) do
     {:ok, file} = File.open(@token_file, [:write])
-    IO.binwrite(file, Poison.encode!(value))
+    IO.binwrite(file, Jason.encode!(value))
     File.close(file)
   end
 end

@@ -28,10 +28,10 @@ defmodule YahooFantasyEx.MixProject do
       {:credo, "~> 1.6.7", only: :dev},
       {:dialyxir, "~> 1.2.0", only: [:dev, :test], runtime: false},
       {:exconstructor, "~>1.2.8"},
-      {:httpoison, "~> 2.0.0"},
       {:jason, "~> 1.3"},
       {:mox, "~> 1.0.2", only: :test},
-      {:poison, "~> 5.0.0"}
+      {:req, "~> 0.4.0"},
+      {:bypass, "~> 2.1", only: :test}
     ]
   end
 

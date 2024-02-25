@@ -1,7 +1,6 @@
 defmodule YahooFantasyEx.Api.Client do
   @moduledoc false
 
-  @base_url "https://fantasysports.yahooapis.com/fantasy/v2"
   @params %{format: :json}
 
   alias YahooFantasyEx.Auth
@@ -10,15 +9,12 @@ defmodule YahooFantasyEx.Api.Client do
   def get!(path) do
     headers = %{Authorization: "Bearer #{Auth.get_access_token()}"}
 
-    url = "#{@base_url}#{path}"
+    url = "#{base_url()}#{path}"
 
-    %HTTPoison.Response{body: body} =
-      http_client().get!(url, headers, params: @params, recv_timeout: 10_000)
+    %Req.Response{body: body} = Req.get!(url: url, headers: headers, params: @params)
 
-    Poison.Parser.parse!(body)
+    Jason.decode!(body)
   end
 
-  defp http_client do
-    Application.get_env(:yahoo_fantasy_ex, :http_client, HTTPoison)
-  end
+  defp base_url, do: Application.get_env(:yahoo_fantasy_ex, :base_url)
 end

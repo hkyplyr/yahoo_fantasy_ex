@@ -4,16 +4,25 @@ defmodule YahooFantasyEx.Api.ClientTest do
 
   import Mox
 
-  alias HTTPoison.Response, as: HttpResponse
-
   alias YahooFantasyEx.Api.Client
   alias YahooFantasyEx.Tokens.ManagerMock
 
   setup :verify_on_exit!
 
+  setup do
+    [bypass: Bypass.open(port: 7997)]
+  end
+
   describe "get!/1" do
-    test "test" do
-      body = %{"fantasy_content" => %{"league" => load_fixture("league/metadata.json")}}
+    test "test", ctx do
+      Bypass.expect(ctx.bypass, "GET", "/path", fn conn ->
+        body =
+          Jason.encode!(%{
+            "fantasy_content" => %{"league" => load_fixture("league/metadata.json")}
+          })
+
+        Plug.Conn.send_resp(conn, 200, body)
+      end)
 
       expires_by =
         DateTime.utc_now()
@@ -28,8 +37,6 @@ defmodule YahooFantasyEx.Api.ClientTest do
       }
 
       expect(ManagerMock, :read, fn -> {:ok, Jason.encode!(tokens)} end)
-
-      expect(HTTPoison.BaseMock, :get!, fn _, _, _ -> %HttpResponse{body: Jason.encode!(body)} end)
 
       assert %{
                "fantasy_content" => %{

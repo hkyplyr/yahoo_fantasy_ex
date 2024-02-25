@@ -1,7 +1,6 @@
 ExUnit.start()
 ExUnit.configure(exclude: :ci_only)
 
-Mox.defmock(HTTPoison.BaseMock, for: HTTPoison.Base)
 Mox.defmock(YahooFantasyEx.Tokens.ManagerMock, for: YahooFantasyEx.Tokens.Manager)
 
 defmodule FakeIO do
@@ -11,5 +10,4 @@ defmodule FakeIO do
 end
 
 Application.put_env(:yahoo_fantasy_ex, :io, FakeIO)
-Application.put_env(:yahoo_fantasy_ex, :http_client, HTTPoison.BaseMock)
 Application.put_env(:yahoo_fantasy_ex, :token_manager, YahooFantasyEx.Tokens.ManagerMock)
