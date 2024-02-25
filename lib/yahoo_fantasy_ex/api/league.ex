@@ -56,6 +56,11 @@ defmodule YahooFantasyEx.Api.League do
     if include_players?, do: get("#{url}/players"), else: get(url)
   end
 
+  @spec standings(String.t()) :: League.t()
+  def standings(league_key) do
+    get("/league/#{league_key}/standings")
+  end
+
   defp get(url) do
     url |> Client.get!() |> Parser.parse()
   end

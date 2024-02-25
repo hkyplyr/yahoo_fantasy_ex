@@ -27,6 +27,7 @@ defmodule YahooFantasyEx.Models.Helpers do
   def cast_float(value) when value in @nil_values, do: nil
   def cast_float(value) when is_float(value), do: value
   def cast_float(value) when is_integer(value), do: value * 1.0
+  def cast_float(<<".", _rest::binary>> = value), do: cast_float("0" <> value)
 
   def cast_float(value) when is_binary(value) do
     case Float.parse(value) do
@@ -38,10 +39,12 @@ defmodule YahooFantasyEx.Models.Helpers do
   @spec cast_atom(String.t()) :: atom()
   def cast_atom(value), do: String.to_existing_atom(value)
 
-  @spec cast_atom!(String.t()) :: atom()
+  @spec cast_atom!(String.t() | nil) :: atom() | nil
+  def cast_atom!(nil), do: nil
   def cast_atom!(value), do: String.to_atom(value)
 
-  @spec cast_date(term()) :: Date.t()
+  @spec cast_date(term() | nil) :: Date.t() | nil
+  def cast_date(nil), do: nil
   def cast_date(value), do: Date.from_iso8601!(value)
 
   @spec translate_sort_order(String.t()) :: :asc | :desc

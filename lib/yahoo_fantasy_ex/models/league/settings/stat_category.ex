@@ -24,14 +24,14 @@ defmodule YahooFantasyEx.Models.League.Settings.StatCategory do
           stat_id: integer()
         }
 
-  @spec new(map()) :: t()
-  def new(%{"stat" => data}) do
+  @spec new(map(), League.t()) :: t()
+  def new(%{"stat" => data}, league) do
     data
-    |> super()
+    |> super([])
     |> transform(
       enabled: &cast_boolean/1,
       group: &cast_atom!/1,
-      position_type: &translate_position_type/1,
+      position_type: &translate_position_type(&1, league),
       sort_order: &translate_sort_order/1,
       stat_id: &cast_integer/1
     )

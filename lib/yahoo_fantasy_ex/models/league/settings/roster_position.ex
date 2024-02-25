@@ -24,7 +24,7 @@ defmodule YahooFantasyEx.Models.League.Settings.RosterPosition do
       count: &cast_integer/1,
       is_starting_position: &cast_boolean/1,
       position: &translate_position/1,
-      position_type: &translate_position_type/1
+      position_type: &translate_position_type(&1, nil)
     )
   end
 end

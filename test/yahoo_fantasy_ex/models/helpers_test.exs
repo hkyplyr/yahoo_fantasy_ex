@@ -43,6 +43,7 @@ defmodule YahooFantasyEx.Models.HelpersTest do
       assert Helpers.cast_float("1") == 1.0
       assert Helpers.cast_float(1.0) == 1.0
       assert Helpers.cast_float(0) == 0.0
+      assert Helpers.cast_float(".333") == 0.333
     end
   end
 

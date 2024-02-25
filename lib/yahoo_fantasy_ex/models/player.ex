@@ -72,7 +72,7 @@ defmodule YahooFantasyEx.Models.Player do
       player_notes_last_timestamp: &cast_integer/1,
       player_points: &parse_player_points/1,
       player_stats: &Stat.new/1,
-      position_type: &translate_position_type/1,
+      position_type: &translate_position_type(&1, nil),
       primary_position: &translate_position/1,
       status: &translate_status/1,
       uniform_number: &cast_integer/1

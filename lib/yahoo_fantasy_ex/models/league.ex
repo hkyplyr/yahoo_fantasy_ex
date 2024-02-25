@@ -43,7 +43,7 @@ defmodule YahooFantasyEx.Models.League do
           allow_add_to_dl_extra_pos: boolean(),
           current_week: integer(),
           draft_status: atom(),
-          edit_key: Date.t(),
+          edit_key: String.t(),
           end_date: Date.t(),
           end_week: integer(),
           felo_tier: atom(),
@@ -81,7 +81,6 @@ defmodule YahooFantasyEx.Models.League do
       allow_add_to_dl_extra_pos: &cast_boolean/1,
       current_week: &cast_integer/1,
       draft_status: &cast_atom!/1,
-      edit_key: &cast_date/1,
       end_date: &cast_date/1,
       end_week: &cast_integer/1,
       felo_tier: &cast_atom!/1,
@@ -106,7 +105,7 @@ defmodule YahooFantasyEx.Models.League do
 
   defp populate_subresources(league, subresources) do
     Enum.reduce(subresources, league, fn subresource, acc ->
-      {key, parsed} = Parser.parse_subresource(subresource)
+      {key, parsed} = Parser.parse_subresource(subresource, league)
       Map.put(acc, key, parsed)
     end)
   end

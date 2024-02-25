@@ -20,7 +20,7 @@ defmodule YahooFantasyEx.Models.LeagueTest do
                allow_add_to_dl_extra_pos: true,
                current_week: 17,
                draft_status: :postdraft,
-               edit_key: ~D[2023-02-05],
+               edit_key: "2023-02-05",
                end_date: ~D[2023-04-02],
                end_week: 24,
                felo_tier: :gold,

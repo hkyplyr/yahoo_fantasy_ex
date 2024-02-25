@@ -78,11 +78,11 @@ defmodule YahooFantasyEx.Models.League.Settings do
           waiver_type: atom()
         }
 
-  @spec new(map()) :: t()
-  def new(settings) do
+  @spec new(map(), League.t()) :: t()
+  def new(settings, league) do
     settings
     |> flatten()
-    |> super()
+    |> super([])
     |> transform(
       can_trade_draft_picks: &cast_boolean/1,
       cant_cut_list: &cast_atom!/1,
@@ -104,7 +104,7 @@ defmodule YahooFantasyEx.Models.League.Settings do
       roster_import_deadline: &cast_date/1,
       roster_positions: &parse_roster_positions/1,
       scoring_type: &cast_atom!/1,
-      stat_categories: &parse_stat_categories/1,
+      stat_categories: &parse_stat_categories(&1, league),
       stat_modifiers: &parse_stat_modifiers/1,
       trade_end_date: &cast_date/1,
       trade_ratify_type: &cast_atom!/1,
@@ -128,11 +128,13 @@ defmodule YahooFantasyEx.Models.League.Settings do
     Enum.map(roster_positions, &RosterPosition.new/1)
   end
 
-  defp parse_stat_categories(stat_categories) do
+  defp parse_stat_categories(stat_categories, league) do
     stat_categories
     |> Map.get("stats")
-    |> Enum.map(&StatCategory.new/1)
+    |> Enum.map(&StatCategory.new(&1, league))
   end
+
+  defp parse_stat_modifiers(nil), do: []
 
   defp parse_stat_modifiers(stat_modifiers) do
     stat_modifiers
