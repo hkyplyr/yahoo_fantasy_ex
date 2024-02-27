@@ -11,9 +11,16 @@ defmodule YahooFantasyEx.Api.Client do
 
     url = "#{base_url()}#{path}"
 
-    %Req.Response{body: body} = Req.get!(url: url, headers: headers, params: @params)
+    %Req.Response{body: body} =
+      Req.get!(
+        url: url,
+        headers: headers,
+        params: @params,
+        http_errors: :raise,
+        decode_json: [keys: :atoms]
+      )
 
-    Jason.decode!(body)
+    body
   end
 
   defp base_url, do: Application.get_env(:yahoo_fantasy_ex, :base_url)

@@ -10,9 +10,8 @@ defmodule YahooFantasyEx.Models.League.Settings.StatModifier do
         }
 
   @spec new(map()) :: t()
-  def new(%{"stat" => data}) do
+  def new(%{stat: data}) do
     data
-    |> super()
     |> transform(
       stat_id: &cast_integer/1,
       value: &cast_float/1

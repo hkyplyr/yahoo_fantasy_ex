@@ -30,7 +30,6 @@ defmodule YahooFantasyEx.Models.Matchup do
 
   def new({_, %{"matchup" => matchup}}) do
     matchup
-    |> super()
     |> transform(
       is_consolation: &cast_boolean/1,
       is_playoffs: &cast_boolean/1,

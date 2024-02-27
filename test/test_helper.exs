@@ -1,7 +1,4 @@
 ExUnit.start()
-ExUnit.configure(exclude: :ci_only)
-
-Mox.defmock(YahooFantasyEx.Tokens.ManagerMock, for: YahooFantasyEx.Tokens.Manager)
 
 defmodule FakeIO do
   def gets("Code: "), do: "API Code"
@@ -10,4 +7,3 @@ defmodule FakeIO do
 end
 
 Application.put_env(:yahoo_fantasy_ex, :io, FakeIO)
-Application.put_env(:yahoo_fantasy_ex, :token_manager, YahooFantasyEx.Tokens.ManagerMock)

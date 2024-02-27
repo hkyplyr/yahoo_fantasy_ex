@@ -1,16 +1,7 @@
 defmodule YahooFantasyEx.Models.HelpersTest do
   use ExUnit.Case
-  doctest YahooFantasyEx.Models.Helpers
 
   alias YahooFantasyEx.Models.Helpers
-
-  describe "flatten_attributes/1" do
-    test "flattens and merges list of attributes to a map" do
-      attributes = [%{one: 1}, [%{two: 2}, %{three: 3}]]
-
-      assert %{one: 1, two: 2, three: 3} = Helpers.flatten_attributes(attributes)
-    end
-  end
 
   describe "cast_boolean/1" do
     test "converts truthy values correctly" do

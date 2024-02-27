@@ -27,8 +27,7 @@ defmodule YahooFantasyEx.Models.Transaction do
   @spec new(map()) :: t() | nil
   def new({_, %{"transaction" => data}}) do
     data
-    |> flatten_attributes()
-    |> super()
+    # |> flatten_attributes()
     |> transform(
       picks: &parse_picks/1,
       players: &parse_players/1,

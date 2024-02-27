@@ -1,554 +1,592 @@
 {
-    "0": {
-        "transaction": [
+    "fantasy_content": {
+        "league": [
             {
-                "transaction_key": "419.l.6738.tr.470",
-                "transaction_id": "470",
-                "type": "add",
-                "status": "successful",
-                "timestamp": "1675472438"
+                "league_key": "nhl.l.12345",
+                "league_id": "12345",
+                "name": "Keeper",
+                "url": "https:\/\/hockey.fantasysports.yahoo.com\/hockey\/12345",
+                "logo_url": false,
+                "password": "",
+                "draft_status": "postdraft",
+                "num_teams": 12,
+                "edit_key": "2023-02-05",
+                "weekly_deadline": "intraday",
+                "league_update_timestamp": "1675587096",
+                "scoring_type": "headpoint",
+                "league_type": "private",
+                "renew": "411_4774",
+                "renewed": "",
+                "felo_tier": "gold",
+                "iris_group_chat_id": "",
+                "short_invitation_url": "https:\/\/hockey.fantasysports.yahoo.com\/hockey\/12345\/invitation?key=9e0e5eaa89ae708b&ikey=dd80c7abe6645d51",
+                "allow_add_to_dl_extra_pos": 1,
+                "is_pro_league": "0",
+                "is_cash_league": "0",
+                "current_week": 17,
+                "start_week": "1",
+                "start_date": "2022-10-07",
+                "end_week": "24",
+                "end_date": "2023-04-02",
+                "game_code": "nhl",
+                "season": "2022"
             },
             {
-                "players": {
+                "transactions": {
                     "0": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.5783"
-                                },
-                                {
-                                    "player_id": "5783"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Erik Gustafsson",
-                                        "first": "Erik",
-                                        "last": "Gustafsson",
-                                        "ascii_first": "Erik",
-                                        "ascii_last": "Gustafsson"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "WSH"
-                                },
-                                {
-                                    "display_position": "D"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
+                        "transaction": [
                             {
-                                "transaction_data": [
-                                    {
-                                        "type": "add",
-                                        "source_type": "freeagents",
-                                        "destination_type": "team",
-                                        "destination_team_key": "419.l.6738.t.11",
-                                        "destination_team_name": "Team Two"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "count": 1
-                }
-            }
-        ]
-    },
-    "1": {
-        "transaction": [
-            {
-                "transaction_key": "419.l.6738.tr.469",
-                "transaction_id": "469",
-                "type": "add\/drop",
-                "status": "successful",
-                "timestamp": "1675352982"
-            },
-            {
-                "players": {
-                    "0": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.6390"
-                                },
-                                {
-                                    "player_id": "6390"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Jared McCann",
-                                        "first": "Jared",
-                                        "last": "McCann",
-                                        "ascii_first": "Jared",
-                                        "ascii_last": "McCann"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "SEA"
-                                },
-                                {
-                                    "display_position": "C,LW"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
+                                "transaction_key": "nhl.l.12345.tr.470",
+                                "transaction_id": "470",
+                                "type": "add",
+                                "status": "successful",
+                                "timestamp": "1675472438"
+                            },
                             {
-                                "transaction_data": [
-                                    {
-                                        "type": "add",
-                                        "source_type": "freeagents",
-                                        "destination_type": "team",
-                                        "destination_team_key": "419.l.6738.t.10",
-                                        "destination_team_name": "Team Three"
-                                    }
-                                ]
+                                "players": {
+                                    "0": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.5783"
+                                                },
+                                                {
+                                                    "player_id": "5783"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Erik Gustafsson",
+                                                        "first": "Erik",
+                                                        "last": "Gustafsson",
+                                                        "ascii_first": "Erik",
+                                                        "ascii_last": "Gustafsson"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "WSH"
+                                                },
+                                                {
+                                                    "display_position": "D"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": [
+                                                    {
+                                                        "type": "add",
+                                                        "source_type": "freeagents",
+                                                        "destination_type": "team",
+                                                        "destination_team_key": "nhl.l.12345.t.11",
+                                                        "destination_team_name": "Team Two"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "count": 1
+                                }
                             }
                         ]
                     },
                     "1": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.5024"
-                                },
-                                {
-                                    "player_id": "5024"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Calle Jarnkrok",
-                                        "first": "Calle",
-                                        "last": "Jarnkrok",
-                                        "ascii_first": "Calle",
-                                        "ascii_last": "Jarnkrok"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "TOR"
-                                },
-                                {
-                                    "display_position": "C,LW,RW"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
+                        "transaction": [
                             {
-                                "transaction_data": {
-                                    "type": "drop",
-                                    "source_type": "team",
-                                    "source_team_key": "419.l.6738.t.10",
-                                    "source_team_name": "Team Three",
-                                    "destination_type": "waivers"
-                                }
-                            }
-                        ]
-                    },
-                    "count": 2
-                }
-            }
-        ]
-    },
-    "4": {
-        "transaction": [
-            {
-                "transaction_key": "419.l.6738.tr.466",
-                "transaction_id": "466",
-                "type": "trade",
-                "status": "successful",
-                "timestamp": "1675155236",
-                "trader_team_key": "419.l.6738.t.8",
-                "trader_team_name": "Team One",
-                "tradee_team_key": "419.l.6738.t.10",
-                "tradee_team_name": "Team Three",
-                "picks": [
-                    {
-                        "pick": {
-                            "source_team_key": "419.l.6738.t.8",
-                            "source_team_name": "Team One",
-                            "destination_team_key": "419.l.6738.t.10",
-                            "destination_team_name": "Team Three",
-                            "original_team_key": "419.l.6738.t.8",
-                            "original_team_name": "Team One",
-                            "round": "1"
-                        }
-                    },
-                    {
-                        "pick": {
-                            "source_team_key": "419.l.6738.t.8",
-                            "source_team_name": "Team One",
-                            "destination_team_key": "419.l.6738.t.10",
-                            "destination_team_name": "Team Three",
-                            "original_team_key": "419.l.6738.t.8",
-                            "original_team_name": "Team One",
-                            "round": "6"
-                        }
-                    },
-                    {
-                        "pick": {
-                            "source_team_key": "419.l.6738.t.8",
-                            "source_team_name": "Team One",
-                            "destination_team_key": "419.l.6738.t.10",
-                            "destination_team_name": "Team Three",
-                            "original_team_key": "419.l.6738.t.8",
-                            "original_team_name": "Team One",
-                            "round": "8"
-                        }
-                    },
-                    {
-                        "pick": {
-                            "source_team_key": "419.l.6738.t.10",
-                            "source_team_name": "Team Three",
-                            "destination_team_key": "419.l.6738.t.8",
-                            "destination_team_name": "Team One",
-                            "original_team_key": "419.l.6738.t.10",
-                            "original_team_name": "Team Three",
-                            "round": "7"
-                        }
-                    },
-                    {
-                        "pick": {
-                            "source_team_key": "419.l.6738.t.10",
-                            "source_team_name": "Team Three",
-                            "destination_team_key": "419.l.6738.t.8",
-                            "destination_team_name": "Team One",
-                            "original_team_key": "419.l.6738.t.10",
-                            "original_team_name": "Team Three",
-                            "round": "13"
-                        }
-                    },
-                    {
-                        "pick": {
-                            "source_team_key": "419.l.6738.t.10",
-                            "source_team_name": "Team Three",
-                            "destination_team_key": "419.l.6738.t.8",
-                            "destination_team_name": "Team One",
-                            "original_team_key": "419.l.6738.t.10",
-                            "original_team_name": "Team Three",
-                            "round": "16"
-                        }
-                    }
-                ]
-            },
-            {
-                "players": {
-                    "0": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.5024"
-                                },
-                                {
-                                    "player_id": "5024"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Calle Jarnkrok",
-                                        "first": "Calle",
-                                        "last": "Jarnkrok",
-                                        "ascii_first": "Calle",
-                                        "ascii_last": "Jarnkrok"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "TOR"
-                                },
-                                {
-                                    "display_position": "C,LW,RW"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
+                                "transaction_key": "nhl.l.12345.tr.469",
+                                "transaction_id": "469",
+                                "type": "add\/drop",
+                                "status": "successful",
+                                "timestamp": "1675352982"
+                            },
                             {
-                                "transaction_data": [
-                                    {
-                                        "type": "trade",
-                                        "source_type": "team",
-                                        "source_team_key": "419.l.6738.t.8",
-                                        "source_team_name": "Team One",
-                                        "destination_type": "team",
-                                        "destination_team_key": "419.l.6738.t.10",
-                                        "destination_team_name": "Team Three"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "1": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.5254"
-                                },
-                                {
-                                    "player_id": "5254"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Dmitry Orlov",
-                                        "first": "Dmitry",
-                                        "last": "Orlov",
-                                        "ascii_first": "Dmitry",
-                                        "ascii_last": "Orlov"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "WSH"
-                                },
-                                {
-                                    "display_position": "D"
-                                },
-                                {
-                                    "position_type": "P"
+                                "players": {
+                                    "0": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.6390"
+                                                },
+                                                {
+                                                    "player_id": "6390"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Jared McCann",
+                                                        "first": "Jared",
+                                                        "last": "McCann",
+                                                        "ascii_first": "Jared",
+                                                        "ascii_last": "McCann"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "SEA"
+                                                },
+                                                {
+                                                    "display_position": "C,LW"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": [
+                                                    {
+                                                        "type": "add",
+                                                        "source_type": "freeagents",
+                                                        "destination_type": "team",
+                                                        "destination_team_key": "nhl.l.12345.t.10",
+                                                        "destination_team_name": "Team Three"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "1": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.5024"
+                                                },
+                                                {
+                                                    "player_id": "5024"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Calle Jarnkrok",
+                                                        "first": "Calle",
+                                                        "last": "Jarnkrok",
+                                                        "ascii_first": "Calle",
+                                                        "ascii_last": "Jarnkrok"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "TOR"
+                                                },
+                                                {
+                                                    "display_position": "C,LW,RW"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": {
+                                                    "type": "drop",
+                                                    "source_type": "team",
+                                                    "source_team_key": "nhl.l.12345.t.10",
+                                                    "source_team_name": "Team Three",
+                                                    "destination_type": "waivers"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "count": 2
                                 }
-                            ],
-                            {
-                                "transaction_data": [
-                                    {
-                                        "type": "trade",
-                                        "source_type": "team",
-                                        "source_team_key": "419.l.6738.t.8",
-                                        "source_team_name": "Team One",
-                                        "destination_type": "team",
-                                        "destination_team_key": "419.l.6738.t.10",
-                                        "destination_team_name": "Team Three"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "2": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.7920"
-                                },
-                                {
-                                    "player_id": "7920"
-                                },
-                                {
-                                    "name": {
-                                        "full": "K'Andre Miller",
-                                        "first": "K'Andre",
-                                        "last": "Miller",
-                                        "ascii_first": "K'Andre",
-                                        "ascii_last": "Miller"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "NYR"
-                                },
-                                {
-                                    "display_position": "D"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
-                            {
-                                "transaction_data": [
-                                    {
-                                        "type": "trade",
-                                        "source_type": "team",
-                                        "source_team_key": "419.l.6738.t.8",
-                                        "source_team_name": "Team One",
-                                        "destination_type": "team",
-                                        "destination_team_key": "419.l.6738.t.10",
-                                        "destination_team_name": "Team Three"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "3": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.4471"
-                                },
-                                {
-                                    "player_id": "4471"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Steven Stamkos",
-                                        "first": "Steven",
-                                        "last": "Stamkos",
-                                        "ascii_first": "Steven",
-                                        "ascii_last": "Stamkos"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "TB"
-                                },
-                                {
-                                    "display_position": "C,LW"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
-                            {
-                                "transaction_data": [
-                                    {
-                                        "type": "trade",
-                                        "source_type": "team",
-                                        "source_team_key": "419.l.6738.t.10",
-                                        "source_team_name": "Team Three",
-                                        "destination_type": "team",
-                                        "destination_team_key": "419.l.6738.t.8",
-                                        "destination_team_name": "Team One"
-                                    }
-                                ]
                             }
                         ]
                     },
                     "4": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.4472"
-                                },
-                                {
-                                    "player_id": "4472"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Drew Doughty",
-                                        "first": "Drew",
-                                        "last": "Doughty",
-                                        "ascii_first": "Drew",
-                                        "ascii_last": "Doughty"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "LA"
-                                },
-                                {
-                                    "display_position": "D"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
+                        "transaction": [
                             {
-                                "transaction_data": [
+                                "transaction_key": "nhl.l.12345.tr.466",
+                                "transaction_id": "466",
+                                "type": "trade",
+                                "status": "successful",
+                                "timestamp": "1675155236",
+                                "trader_team_key": "nhl.l.12345.t.8",
+                                "trader_team_name": "Team One",
+                                "tradee_team_key": "nhl.l.12345.t.10",
+                                "tradee_team_name": "Team Three",
+                                "picks": [
                                     {
-                                        "type": "trade",
-                                        "source_type": "team",
-                                        "source_team_key": "419.l.6738.t.10",
-                                        "source_team_name": "Team Three",
-                                        "destination_type": "team",
-                                        "destination_team_key": "419.l.6738.t.8",
-                                        "destination_team_name": "Team One"
+                                        "pick": {
+                                            "source_team_key": "nhl.l.12345.t.8",
+                                            "source_team_name": "Team One",
+                                            "destination_team_key": "nhl.l.12345.t.10",
+                                            "destination_team_name": "Team Three",
+                                            "original_team_key": "nhl.l.12345.t.8",
+                                            "original_team_name": "Team One",
+                                            "round": "1"
+                                        }
+                                    },
+                                    {
+                                        "pick": {
+                                            "source_team_key": "nhl.l.12345.t.8",
+                                            "source_team_name": "Team One",
+                                            "destination_team_key": "nhl.l.12345.t.10",
+                                            "destination_team_name": "Team Three",
+                                            "original_team_key": "nhl.l.12345.t.8",
+                                            "original_team_name": "Team One",
+                                            "round": "6"
+                                        }
+                                    },
+                                    {
+                                        "pick": {
+                                            "source_team_key": "nhl.l.12345.t.8",
+                                            "source_team_name": "Team One",
+                                            "destination_team_key": "nhl.l.12345.t.10",
+                                            "destination_team_name": "Team Three",
+                                            "original_team_key": "nhl.l.12345.t.8",
+                                            "original_team_name": "Team One",
+                                            "round": "8"
+                                        }
+                                    },
+                                    {
+                                        "pick": {
+                                            "source_team_key": "nhl.l.12345.t.10",
+                                            "source_team_name": "Team Three",
+                                            "destination_team_key": "nhl.l.12345.t.8",
+                                            "destination_team_name": "Team One",
+                                            "original_team_key": "nhl.l.12345.t.10",
+                                            "original_team_name": "Team Three",
+                                            "round": "7"
+                                        }
+                                    },
+                                    {
+                                        "pick": {
+                                            "source_team_key": "nhl.l.12345.t.10",
+                                            "source_team_name": "Team Three",
+                                            "destination_team_key": "nhl.l.12345.t.8",
+                                            "destination_team_name": "Team One",
+                                            "original_team_key": "nhl.l.12345.t.10",
+                                            "original_team_name": "Team Three",
+                                            "round": "13"
+                                        }
+                                    },
+                                    {
+                                        "pick": {
+                                            "source_team_key": "nhl.l.12345.t.10",
+                                            "source_team_name": "Team Three",
+                                            "destination_team_key": "nhl.l.12345.t.8",
+                                            "destination_team_name": "Team One",
+                                            "original_team_key": "nhl.l.12345.t.10",
+                                            "original_team_name": "Team Three",
+                                            "round": "16"
+                                        }
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    "5": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.4474"
-                                },
-                                {
-                                    "player_id": "4474"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Alex Pietrangelo",
-                                        "first": "Alex",
-                                        "last": "Pietrangelo",
-                                        "ascii_first": "Alex",
-                                        "ascii_last": "Pietrangelo"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "VGK"
-                                },
-                                {
-                                    "display_position": "D"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
+                            },
                             {
-                                "transaction_data": [
-                                    {
-                                        "type": "trade",
-                                        "source_type": "team",
-                                        "source_team_key": "419.l.6738.t.10",
-                                        "source_team_name": "Team Three",
-                                        "destination_type": "team",
-                                        "destination_team_key": "419.l.6738.t.8",
-                                        "destination_team_name": "Team One"
-                                    }
-                                ]
+                                "players": {
+                                    "0": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.5024"
+                                                },
+                                                {
+                                                    "player_id": "5024"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Calle Jarnkrok",
+                                                        "first": "Calle",
+                                                        "last": "Jarnkrok",
+                                                        "ascii_first": "Calle",
+                                                        "ascii_last": "Jarnkrok"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "TOR"
+                                                },
+                                                {
+                                                    "display_position": "C,LW,RW"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": [
+                                                    {
+                                                        "type": "trade",
+                                                        "source_type": "team",
+                                                        "source_team_key": "nhl.l.12345.t.8",
+                                                        "source_team_name": "Team One",
+                                                        "destination_type": "team",
+                                                        "destination_team_key": "nhl.l.12345.t.10",
+                                                        "destination_team_name": "Team Three"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "1": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.5254"
+                                                },
+                                                {
+                                                    "player_id": "5254"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Dmitry Orlov",
+                                                        "first": "Dmitry",
+                                                        "last": "Orlov",
+                                                        "ascii_first": "Dmitry",
+                                                        "ascii_last": "Orlov"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "WSH"
+                                                },
+                                                {
+                                                    "display_position": "D"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": [
+                                                    {
+                                                        "type": "trade",
+                                                        "source_type": "team",
+                                                        "source_team_key": "nhl.l.12345.t.8",
+                                                        "source_team_name": "Team One",
+                                                        "destination_type": "team",
+                                                        "destination_team_key": "nhl.l.12345.t.10",
+                                                        "destination_team_name": "Team Three"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "2": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.7920"
+                                                },
+                                                {
+                                                    "player_id": "7920"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "K'Andre Miller",
+                                                        "first": "K'Andre",
+                                                        "last": "Miller",
+                                                        "ascii_first": "K'Andre",
+                                                        "ascii_last": "Miller"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "NYR"
+                                                },
+                                                {
+                                                    "display_position": "D"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": [
+                                                    {
+                                                        "type": "trade",
+                                                        "source_type": "team",
+                                                        "source_team_key": "nhl.l.12345.t.8",
+                                                        "source_team_name": "Team One",
+                                                        "destination_type": "team",
+                                                        "destination_team_key": "nhl.l.12345.t.10",
+                                                        "destination_team_name": "Team Three"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "3": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.4471"
+                                                },
+                                                {
+                                                    "player_id": "4471"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Steven Stamkos",
+                                                        "first": "Steven",
+                                                        "last": "Stamkos",
+                                                        "ascii_first": "Steven",
+                                                        "ascii_last": "Stamkos"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "TB"
+                                                },
+                                                {
+                                                    "display_position": "C,LW"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": [
+                                                    {
+                                                        "type": "trade",
+                                                        "source_type": "team",
+                                                        "source_team_key": "nhl.l.12345.t.10",
+                                                        "source_team_name": "Team Three",
+                                                        "destination_type": "team",
+                                                        "destination_team_key": "nhl.l.12345.t.8",
+                                                        "destination_team_name": "Team One"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "4": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.4472"
+                                                },
+                                                {
+                                                    "player_id": "4472"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Drew Doughty",
+                                                        "first": "Drew",
+                                                        "last": "Doughty",
+                                                        "ascii_first": "Drew",
+                                                        "ascii_last": "Doughty"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "LA"
+                                                },
+                                                {
+                                                    "display_position": "D"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": [
+                                                    {
+                                                        "type": "trade",
+                                                        "source_type": "team",
+                                                        "source_team_key": "nhl.l.12345.t.10",
+                                                        "source_team_name": "Team Three",
+                                                        "destination_type": "team",
+                                                        "destination_team_key": "nhl.l.12345.t.8",
+                                                        "destination_team_name": "Team One"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "5": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.4474"
+                                                },
+                                                {
+                                                    "player_id": "4474"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Alex Pietrangelo",
+                                                        "first": "Alex",
+                                                        "last": "Pietrangelo",
+                                                        "ascii_first": "Alex",
+                                                        "ascii_last": "Pietrangelo"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "VGK"
+                                                },
+                                                {
+                                                    "display_position": "D"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": [
+                                                    {
+                                                        "type": "trade",
+                                                        "source_type": "team",
+                                                        "source_team_key": "nhl.l.12345.t.10",
+                                                        "source_team_name": "Team Three",
+                                                        "destination_type": "team",
+                                                        "destination_team_key": "nhl.l.12345.t.8",
+                                                        "destination_team_name": "Team One"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "count": 6
+                                }
                             }
                         ]
                     },
-                    "count": 6
-                }
-            }
-        ]
-    },
-    "7": {
-        "transaction": [
-            {
-                "transaction_key": "419.l.6738.tr.463",
-                "transaction_id": "463",
-                "type": "drop",
-                "status": "successful",
-                "timestamp": "1675063822"
-            },
-            {
-                "players": {
-                    "0": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.5329"
-                                },
-                                {
-                                    "player_id": "5329"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Mattias Ekholm",
-                                        "first": "Mattias",
-                                        "last": "Ekholm",
-                                        "ascii_first": "Mattias",
-                                        "ascii_last": "Ekholm"
-                                    }
-                                },
-                                {
-                                    "editorial_team_abbr": "NSH"
-                                },
-                                {
-                                    "display_position": "D"
-                                },
-                                {
-                                    "position_type": "P"
-                                }
-                            ],
+                    "7": {
+                        "transaction": [
                             {
-                                "transaction_data": {
-                                    "type": "drop",
-                                    "source_type": "team",
-                                    "source_team_key": "419.l.6738.t.2",
-                                    "source_team_name": "Team Four",
-                                    "destination_type": "waivers"
+                                "transaction_key": "nhl.l.12345.tr.463",
+                                "transaction_id": "463",
+                                "type": "drop",
+                                "status": "successful",
+                                "timestamp": "1675063822"
+                            },
+                            {
+                                "players": {
+                                    "0": {
+                                        "player": [
+                                            [
+                                                {
+                                                    "player_key": "419.p.5329"
+                                                },
+                                                {
+                                                    "player_id": "5329"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "full": "Mattias Ekholm",
+                                                        "first": "Mattias",
+                                                        "last": "Ekholm",
+                                                        "ascii_first": "Mattias",
+                                                        "ascii_last": "Ekholm"
+                                                    }
+                                                },
+                                                {
+                                                    "editorial_team_abbr": "NSH"
+                                                },
+                                                {
+                                                    "display_position": "D"
+                                                },
+                                                {
+                                                    "position_type": "P"
+                                                }
+                                            ],
+                                            {
+                                                "transaction_data": {
+                                                    "type": "drop",
+                                                    "source_type": "team",
+                                                    "source_team_key": "nhl.l.12345.t.2",
+                                                    "source_team_name": "Team Four",
+                                                    "destination_type": "waivers"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "count": 1
                                 }
                             }
                         ]
-                    },
-                    "count": 1
+                    }
                 }
             }
         ]

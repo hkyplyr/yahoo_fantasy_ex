@@ -1,101 +1,48 @@
 defmodule YahooFantasyEx.AuthTest do
-  use ExUnit.Case
-
-  import Mox
+  use YahooFantasyEx.BaseCase
 
   alias YahooFantasyEx.Auth
-  alias YahooFantasyEx.Tokens.ManagerMock
 
-  setup :verify_on_exit!
-
-  setup do
-    [
-      authorize_bypass: Bypass.open(port: 7998),
-      token_bypass: Bypass.open(port: 7999)
-    ]
-  end
+  setup [:setup_bypass, :setup_tokens]
 
   describe "get_access_token/0" do
-    doctest YahooFantasyEx.Auth, only: [get_access_token: 0]
-
-    setup ctx do
-      expected_read_value =
-        case Map.get(ctx, :expected_state, :existing) do
-          :error -> {:error, :enoent}
-          token_state -> {:ok, tokens(token_state)}
-        end
-
-      expect(ManagerMock, :read, fn -> expected_read_value end)
-
-      :ok
-    end
-
-    @tag expected_state: :error
-    test "retrieves access token from server when one does not exist", ctx do
+    @tag token_state: :no_token
+    test "retrieves access token from server when there is no existing token", ctx do
       Bypass.stub(ctx.authorize_bypass, "GET", "/", fn conn ->
-        conn = Plug.Conn.put_resp_header(conn, "Location", "location")
-        Plug.Conn.send_resp(conn, 200, "")
+        conn
+        |> Plug.Conn.put_resp_header("Location", "location")
+        |> Plug.Conn.send_resp(200, "")
       end)
 
       Bypass.stub(ctx.token_bypass, "POST", "/", fn conn ->
-        Plug.Conn.send_resp(conn, 200, tokens(:new))
+        conn
+        |> Plug.Conn.put_resp_content_type("application/json")
+        |> Plug.Conn.send_resp(200, tokens(:new))
       end)
-
-      expect(ManagerMock, :write, fn _ -> :ok end)
 
       assert "new_token" == Auth.get_access_token()
     end
 
-    @tag expected_state: :expired
-    test "returns a refreshed access token when existing tokens are expired", ctx do
-      expect(ManagerMock, :write, fn _ -> :ok end)
-
+    @tag token_state: :expired
+    test "retreives refreshed access token when existing tokens are expired", ctx do
       Bypass.stub(ctx.authorize_bypass, "GET", "/", fn conn ->
-        conn = Plug.Conn.put_resp_header(conn, "Location", "location")
-        Plug.Conn.send_resp(conn, 200, "")
+        conn
+        |> Plug.Conn.put_resp_header("Location", "location")
+        |> Plug.Conn.send_resp(200, "")
       end)
 
       Bypass.stub(ctx.token_bypass, "POST", "/", fn conn ->
-        Plug.Conn.send_resp(conn, 200, tokens(:refreshed))
+        conn
+        |> Plug.Conn.put_resp_content_type("application/json")
+        |> Plug.Conn.send_resp(200, tokens(:refreshed))
       end)
 
       assert "refreshed_token" == Auth.get_access_token()
     end
 
-    @tag expected_state: :existing
+    @tag token_state: :valid
     test "returns existing access token" do
       assert "access_token" == Auth.get_access_token()
     end
-  end
-
-  defp tokens(:new) do
-    build_tokens(%{"access_token" => "new_token"})
-  end
-
-  defp tokens(:expired) do
-    build_tokens(%{"expires_by" => 0})
-  end
-
-  defp tokens(:existing) do
-    expires_by =
-      DateTime.utc_now()
-      |> DateTime.to_unix()
-      |> Kernel.+(500)
-
-    build_tokens(%{"expires_by" => expires_by})
-  end
-
-  defp tokens(:refreshed) do
-    build_tokens(%{"access_token" => "refreshed_token"})
-  end
-
-  defp build_tokens(attrs) do
-    %{
-      "access_token" => "access_token",
-      "refresh_token" => "refresh_token",
-      "expires_in" => 3600
-    }
-    |> Map.merge(attrs)
-    |> Jason.encode!()
   end
 end

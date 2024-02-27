@@ -1,15 +1,6 @@
 defmodule YahooFantasyEx.Models.Helpers do
   @moduledoc false
 
-  @spec flatten_attributes(list()) :: map()
-  def flatten_attributes(attributes) do
-    attributes
-    |> List.flatten()
-    |> Enum.reduce(fn x, y ->
-      Map.merge(x, y, fn _k, v1, v2 -> v2 ++ v1 end)
-    end)
-  end
-
   @spec cast_boolean(term()) :: boolean()
   def cast_boolean(value) when is_binary(value), do: String.to_integer(value) == 1
   def cast_boolean(value) when is_integer(value), do: value == 1
@@ -60,10 +51,10 @@ defmodule YahooFantasyEx.Models.Helpers do
   def translate_status("IR-NR"), do: :non_roster_injured_reserve
   def translate_status(_), do: nil
 
-  @spec transform(struct(), Keyword.t()) :: struct()
+  @spec transform(map(), Keyword.t()) :: struct()
   def transform(struct, transform_functions) do
     transform_functions
-    |> Enum.reduce(struct, fn {field, transform_function}, acc ->
+    |> Enum.reduce(%{}, fn {field, transform_function}, acc ->
       transformed_value =
         struct
         |> Map.get(field)

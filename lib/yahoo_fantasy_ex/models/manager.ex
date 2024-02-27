@@ -29,7 +29,6 @@ defmodule YahooFantasyEx.Models.Manager do
 
   def new(%{"manager" => data}) do
     data
-    |> super()
     |> transform(
       felo_score: &cast_integer/1,
       felo_tier: &cast_atom!/1,

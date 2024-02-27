@@ -23,9 +23,8 @@ defmodule YahooFantasyEx.Models.Transaction.Pick do
         }
 
   @spec new(map()) :: t()
-  def new(%{"pick" => data}) do
+  def new(%{pick: data}) do
     data
-    |> super()
     |> transform(round: &cast_integer/1)
   end
 end

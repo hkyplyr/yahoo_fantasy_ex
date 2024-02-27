@@ -1,105 +1,1967 @@
 {
-    "0": {
-        "draft_result": {
-            "pick": 1,
-            "round": 1,
-            "team_key": "419.l.6738.t.7",
-            "player_key": "419.p.6743"
-        }
-    },
-    "1": {
-        "draft_result": {
-            "pick": 2,
-            "round": 1,
-            "team_key": "419.l.6738.t.12",
-            "player_key": "419.p.7519",
-            "0": {
-                "players": {
-                    "0": {
-                        "player": [
-                            [
-                                {
-                                    "player_key": "419.p.7519"
-                                },
-                                {
-                                    "player_id": "7519"
-                                },
-                                {
-                                    "name": {
-                                        "full": "Cale Makar",
-                                        "first": "Cale",
-                                        "last": "Makar",
-                                        "ascii_first": "Cale",
-                                        "ascii_last": "Makar"
-                                    }
-                                },
-                                {
-                                    "url": "https:\/\/sports.yahoo.com\/nhl\/players\/7519"
-                                },
-                                {
-                                    "editorial_player_key": "nhl.p.7519"
-                                },
-                                {
-                                    "editorial_team_key": "nhl.t.17"
-                                },
-                                {
-                                    "editorial_team_full_name": "Colorado Avalanche"
-                                },
-                                {
-                                    "editorial_team_abbr": "COL"
-                                },
-                                {
-                                    "editorial_team_url": "https:\/\/sports.yahoo.com\/nhl\/teams\/colorado\/"
-                                },
-                                {
-                                    "is_keeper": {
-                                        "status": false,
-                                        "cost": "",
-                                        "kept": false
-                                    }
-                                },
-                                {
-                                    "uniform_number": "8"
-                                },
-                                {
-                                    "display_position": "D"
-                                },
-                                {
-                                    "headshot": {
-                                        "url": "https:\/\/s.yimg.com\/iu\/api\/res\/1.2\/vbdXh0lQqmIljyEW6iQ62w--~C\/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2\/https:\/\/s.yimg.com\/xe\/i\/us\/sp\/v\/nhl_cutout\/players_l\/10252022\/7519.png",
-                                        "size": "small"
-                                    },
-                                    "image_url": "https:\/\/s.yimg.com\/iu\/api\/res\/1.2\/vbdXh0lQqmIljyEW6iQ62w--~C\/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2\/https:\/\/s.yimg.com\/xe\/i\/us\/sp\/v\/nhl_cutout\/players_l\/10252022\/7519.png"
-                                },
-                                {
-                                    "is_undroppable": "0"
-                                },
-                                {
-                                    "position_type": "P"
-                                },
-                                {
-                                    "primary_position": "D"
-                                },
-                                {
-                                    "eligible_positions": [
-                                        {
-                                            "position": "D"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "has_player_notes": 1
-                                },
-                                [],
-                                {
-                                    "player_notes_last_timestamp": 1675004031
-                                }
-                            ]
-                        ]
+    "fantasy_content": {
+        "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
+        "league": [
+            {
+                "allow_add_to_dl_extra_pos": 1,
+                "current_week": 20,
+                "draft_status": "postdraft",
+                "edit_key": "2024-03-03",
+                "end_date": "2024-04-07",
+                "end_week": "25",
+                "felo_tier": "gold",
+                "game_code": "nhl",
+                "iris_group_chat_id": "",
+                "is_cash_league": "0",
+                "is_plus_league": "0",
+                "is_pro_league": "0",
+                "league_id": "12345",
+                "league_key": "nhl.l.12345",
+                "league_type": "private",
+                "league_update_timestamp": "1709455636",
+                "logo_url": false,
+                "name": "Keeper",
+                "num_teams": 12,
+                "password": "",
+                "renew": "419_6738",
+                "renewed": "",
+                "scoring_type": "headpoint",
+                "season": "2023",
+                "short_invitation_url": "https://hockey.fantasysports.yahoo.com/hockey/12345/invitation?key=ca61c149742ba1de&ikey=dda9f47ef6bbeab2",
+                "start_date": "2023-10-10",
+                "start_week": "1",
+                "url": "https://hockey.fantasysports.yahoo.com/hockey/12345",
+                "weekly_deadline": "intraday"
+            },
+            {
+                "draft_results": {
+                    "91": {
+                        "draft_result": {
+                            "pick": 92,
+                            "player_key": "nhl.p.5368",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
                     },
-                    "count": 1
+                    "11": {
+                        "draft_result": {
+                            "pick": 12,
+                            "player_key": "nhl.p.8279",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "32": {
+                        "draft_result": {
+                            "pick": 33,
+                            "player_key": "nhl.p.4002",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "71": {
+                        "draft_result": {
+                            "pick": 72,
+                            "player_key": "nhl.p.5699",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "215": {
+                        "draft_result": {
+                            "pick": 216,
+                            "player_key": "nhl.p.6386",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "99": {
+                        "draft_result": {
+                            "pick": 100,
+                            "player_key": "nhl.p.6370",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "6": {
+                        "draft_result": {
+                            "pick": 7,
+                            "player_key": "nhl.p.6877",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "159": {
+                        "draft_result": {
+                            "pick": 160,
+                            "player_key": "nhl.p.9268",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "177": {
+                        "draft_result": {
+                            "pick": 178,
+                            "player_key": "nhl.p.5846",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "12": {
+                        "draft_result": {
+                            "pick": 13,
+                            "player_key": "nhl.p.3637",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "123": {
+                        "draft_result": {
+                            "pick": 124,
+                            "player_key": "nhl.p.8646",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "173": {
+                        "draft_result": {
+                            "pick": 174,
+                            "player_key": "nhl.p.4976",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "89": {
+                        "draft_result": {
+                            "pick": 90,
+                            "player_key": "nhl.p.6760",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "113": {
+                        "draft_result": {
+                            "pick": 114,
+                            "player_key": "nhl.p.6391",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "238": {
+                        "draft_result": {
+                            "pick": 239,
+                            "player_key": "nhl.p.8935",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "150": {
+                        "draft_result": {
+                            "pick": 151,
+                            "player_key": "nhl.p.5991",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "186": {
+                        "draft_result": {
+                            "pick": 187,
+                            "player_key": "nhl.p.8285",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "27": {
+                        "draft_result": {
+                            "pick": 28,
+                            "player_key": "nhl.p.3638",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "24": {
+                        "draft_result": {
+                            "pick": 25,
+                            "player_key": "nhl.p.7900",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "227": {
+                        "draft_result": {
+                            "pick": 228,
+                            "player_key": "nhl.p.8647",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "161": {
+                        "draft_result": {
+                            "pick": 162,
+                            "player_key": "nhl.p.7525",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "228": {
+                        "draft_result": {
+                            "pick": 229,
+                            "player_key": "nhl.p.8674",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "15": {
+                        "draft_result": {
+                            "pick": 16,
+                            "player_key": "nhl.p.6448",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "155": {
+                        "draft_result": {
+                            "pick": 156,
+                            "player_key": "nhl.p.4491",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "37": {
+                        "draft_result": {
+                            "pick": 38,
+                            "player_key": "nhl.p.5983",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "139": {
+                        "draft_result": {
+                            "pick": 140,
+                            "player_key": "nhl.p.8284",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "80": {
+                        "draft_result": {
+                            "pick": 81,
+                            "player_key": "nhl.p.4519",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "209": {
+                        "draft_result": {
+                            "pick": 210,
+                            "player_key": "nhl.p.7264",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "230": {
+                        "draft_result": {
+                            "pick": 231,
+                            "player_key": "nhl.p.30227",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "153": {
+                        "draft_result": {
+                            "pick": 154,
+                            "player_key": "nhl.p.5032",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "142": {
+                        "draft_result": {
+                            "pick": 143,
+                            "player_key": "nhl.p.8314",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "211": {
+                        "draft_result": {
+                            "pick": 212,
+                            "player_key": "nhl.p.4261",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "14": {
+                        "draft_result": {
+                            "pick": 15,
+                            "player_key": "nhl.p.6447",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "193": {
+                        "draft_result": {
+                            "pick": 194,
+                            "player_key": "nhl.p.7498",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "33": {
+                        "draft_result": {
+                            "pick": 34,
+                            "player_key": "nhl.p.4699",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "207": {
+                        "draft_result": {
+                            "pick": 208,
+                            "player_key": "nhl.p.3641",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "35": {
+                        "draft_result": {
+                            "pick": 36,
+                            "player_key": "nhl.p.7110",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "112": {
+                        "draft_result": {
+                            "pick": 113,
+                            "player_key": "nhl.p.4921",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "151": {
+                        "draft_result": {
+                            "pick": 152,
+                            "player_key": "nhl.p.6055",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "96": {
+                        "draft_result": {
+                            "pick": 97,
+                            "player_key": "nhl.p.8291",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "51": {
+                        "draft_result": {
+                            "pick": 52,
+                            "player_key": "nhl.p.5364",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "19": {
+                        "draft_result": {
+                            "pick": 20,
+                            "player_key": "nhl.p.6057",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "222": {
+                        "draft_result": {
+                            "pick": 223,
+                            "player_key": "nhl.p.6015",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "72": {
+                        "draft_result": {
+                            "pick": 73,
+                            "player_key": "nhl.p.7626",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "9": {
+                        "draft_result": {
+                            "pick": 10,
+                            "player_key": "nhl.p.4930",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "200": {
+                        "draft_result": {
+                            "pick": 201,
+                            "player_key": "nhl.p.4962",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "73": {
+                        "draft_result": {
+                            "pick": 74,
+                            "player_key": "nhl.p.6395",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "79": {
+                        "draft_result": {
+                            "pick": 80,
+                            "player_key": "nhl.p.6750",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "212": {
+                        "draft_result": {
+                            "pick": 213,
+                            "player_key": "nhl.p.4240",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "201": {
+                        "draft_result": {
+                            "pick": 202,
+                            "player_key": "nhl.p.5553",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "18": {
+                        "draft_result": {
+                            "pick": 19,
+                            "player_key": "nhl.p.5370",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "34": {
+                        "draft_result": {
+                            "pick": 35,
+                            "player_key": "nhl.p.4503",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "189": {
+                        "draft_result": {
+                            "pick": 190,
+                            "player_key": "nhl.p.5986",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "157": {
+                        "draft_result": {
+                            "pick": 158,
+                            "player_key": "nhl.p.30111",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "199": {
+                        "draft_result": {
+                            "pick": 200,
+                            "player_key": "nhl.p.8881",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "132": {
+                        "draft_result": {
+                            "pick": 133,
+                            "player_key": "nhl.p.7950",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "220": {
+                        "draft_result": {
+                            "pick": 221,
+                            "player_key": "nhl.p.6765",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "202": {
+                        "draft_result": {
+                            "pick": 203,
+                            "player_key": "nhl.p.8657",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "221": {
+                        "draft_result": {
+                            "pick": 222,
+                            "player_key": "nhl.p.8650",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "56": {
+                        "draft_result": {
+                            "pick": 57,
+                            "player_key": "nhl.p.5376",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "5": {
+                        "draft_result": {
+                            "pick": 6,
+                            "player_key": "nhl.p.7519",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "167": {
+                        "draft_result": {
+                            "pick": 168,
+                            "player_key": "nhl.p.5820",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "147": {
+                        "draft_result": {
+                            "pick": 148,
+                            "player_key": "nhl.p.5992",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "143": {
+                        "draft_result": {
+                            "pick": 144,
+                            "player_key": "nhl.p.6486",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "46": {
+                        "draft_result": {
+                            "pick": 47,
+                            "player_key": "nhl.p.5362",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "103": {
+                        "draft_result": {
+                            "pick": 104,
+                            "player_key": "nhl.p.6777",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "229": {
+                        "draft_result": {
+                            "pick": 230,
+                            "player_key": "nhl.p.8884",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "60": {
+                        "draft_result": {
+                            "pick": 61,
+                            "player_key": "nhl.p.6375",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "180": {
+                        "draft_result": {
+                            "pick": 181,
+                            "player_key": "nhl.p.7527",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "133": {
+                        "draft_result": {
+                            "pick": 134,
+                            "player_key": "nhl.p.7593",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "110": {
+                        "draft_result": {
+                            "pick": 111,
+                            "player_key": "nhl.p.5712",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "218": {
+                        "draft_result": {
+                            "pick": 219,
+                            "player_key": "nhl.p.5639",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "185": {
+                        "draft_result": {
+                            "pick": 186,
+                            "player_key": "nhl.p.7920",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "236": {
+                        "draft_result": {
+                            "pick": 237,
+                            "player_key": "nhl.p.5696",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "188": {
+                        "draft_result": {
+                            "pick": 189,
+                            "player_key": "nhl.p.6384",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "117": {
+                        "draft_result": {
+                            "pick": 118,
+                            "player_key": "nhl.p.7554",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "208": {
+                        "draft_result": {
+                            "pick": 209,
+                            "player_key": "nhl.p.6814",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "225": {
+                        "draft_result": {
+                            "pick": 226,
+                            "player_key": "nhl.p.8033",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "55": {
+                        "draft_result": {
+                            "pick": 56,
+                            "player_key": "nhl.p.6005",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "4": {
+                        "draft_result": {
+                            "pick": 5,
+                            "player_key": "nhl.p.7520",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "154": {
+                        "draft_result": {
+                            "pick": 155,
+                            "player_key": "nhl.p.3985",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "204": {
+                        "draft_result": {
+                            "pick": 205,
+                            "player_key": "nhl.p.4683",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "78": {
+                        "draft_result": {
+                            "pick": 79,
+                            "player_key": "nhl.p.6024",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "179": {
+                        "draft_result": {
+                            "pick": 180,
+                            "player_key": "nhl.p.7174",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "38": {
+                        "draft_result": {
+                            "pick": 39,
+                            "player_key": "nhl.p.7541",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "93": {
+                        "draft_result": {
+                            "pick": 94,
+                            "player_key": "nhl.p.5984",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "145": {
+                        "draft_result": {
+                            "pick": 146,
+                            "player_key": "nhl.p.4498",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "144": {
+                        "draft_result": {
+                            "pick": 145,
+                            "player_key": "nhl.p.8281",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "118": {
+                        "draft_result": {
+                            "pick": 119,
+                            "player_key": "nhl.p.30221",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "108": {
+                        "draft_result": {
+                            "pick": 109,
+                            "player_key": "nhl.p.5407",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "181": {
+                        "draft_result": {
+                            "pick": 182,
+                            "player_key": "nhl.p.6009",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "217": {
+                        "draft_result": {
+                            "pick": 218,
+                            "player_key": "nhl.p.6430",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "62": {
+                        "draft_result": {
+                            "pick": 63,
+                            "player_key": "nhl.p.4687",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "87": {
+                        "draft_result": {
+                            "pick": 88,
+                            "player_key": "nhl.p.6381",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "31": {
+                        "draft_result": {
+                            "pick": 32,
+                            "player_key": "nhl.p.7122",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "104": {
+                        "draft_result": {
+                            "pick": 105,
+                            "player_key": "nhl.p.4351",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "129": {
+                        "draft_result": {
+                            "pick": 130,
+                            "player_key": "nhl.p.8658",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "64": {
+                        "draft_result": {
+                            "pick": 65,
+                            "player_key": "nhl.p.7124",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "190": {
+                        "draft_result": {
+                            "pick": 191,
+                            "player_key": "nhl.p.7902",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "122": {
+                        "draft_result": {
+                            "pick": 123,
+                            "player_key": "nhl.p.5989",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "178": {
+                        "draft_result": {
+                            "pick": 179,
+                            "player_key": "nhl.p.6795",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "237": {
+                        "draft_result": {
+                            "pick": 238,
+                            "player_key": "nhl.p.7170",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "106": {
+                        "draft_result": {
+                            "pick": 107,
+                            "player_key": "nhl.p.6746",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "29": {
+                        "draft_result": {
+                            "pick": 30,
+                            "player_key": "nhl.p.6764",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "26": {
+                        "draft_result": {
+                            "pick": 27,
+                            "player_key": "nhl.p.5470",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "128": {
+                        "draft_result": {
+                            "pick": 129,
+                            "player_key": "nhl.p.4971",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "166": {
+                        "draft_result": {
+                            "pick": 167,
+                            "player_key": "nhl.p.6758",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "164": {
+                        "draft_result": {
+                            "pick": 165,
+                            "player_key": "nhl.p.6756",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "168": {
+                        "draft_result": {
+                            "pick": 169,
+                            "player_key": "nhl.p.6480",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "172": {
+                        "draft_result": {
+                            "pick": 173,
+                            "player_key": "nhl.p.8898",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "54": {
+                        "draft_result": {
+                            "pick": 55,
+                            "player_key": "nhl.p.8287",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "0": {
+                        "draft_result": {
+                            "pick": 1,
+                            "player_key": "nhl.p.6743",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "137": {
+                        "draft_result": {
+                            "pick": 138,
+                            "player_key": "nhl.p.8644",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "156": {
+                        "draft_result": {
+                            "pick": 157,
+                            "player_key": "nhl.p.7526",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "28": {
+                        "draft_result": {
+                            "pick": 29,
+                            "player_key": "nhl.p.7115",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "163": {
+                        "draft_result": {
+                            "pick": 164,
+                            "player_key": "nhl.p.6390",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "8": {
+                        "draft_result": {
+                            "pick": 9,
+                            "player_key": "nhl.p.3737",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "197": {
+                        "draft_result": {
+                            "pick": 198,
+                            "player_key": "nhl.p.8645",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "219": {
+                        "draft_result": {
+                            "pick": 220,
+                            "player_key": "nhl.p.5967",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "216": {
+                        "draft_result": {
+                            "pick": 217,
+                            "player_key": "nhl.p.5085",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "7": {
+                        "draft_result": {
+                            "pick": 8,
+                            "player_key": "nhl.p.7899",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "82": {
+                        "draft_result": {
+                            "pick": 83,
+                            "player_key": "nhl.p.5988",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "203": {
+                        "draft_result": {
+                            "pick": 204,
+                            "player_key": "nhl.p.6062",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "195": {
+                        "draft_result": {
+                            "pick": 196,
+                            "player_key": "nhl.p.5391",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "10": {
+                        "draft_result": {
+                            "pick": 11,
+                            "player_key": "nhl.p.4471",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "223": {
+                        "draft_result": {
+                            "pick": 224,
+                            "player_key": "nhl.p.5982",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "16": {
+                        "draft_result": {
+                            "pick": 17,
+                            "player_key": "nhl.p.7736",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "175": {
+                        "draft_result": {
+                            "pick": 176,
+                            "player_key": "nhl.p.5369",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "131": {
+                        "draft_result": {
+                            "pick": 132,
+                            "player_key": "nhl.p.5981",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "22": {
+                        "draft_result": {
+                            "pick": 23,
+                            "player_key": "nhl.p.4681",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "30": {
+                        "draft_result": {
+                            "pick": 31,
+                            "player_key": "nhl.p.6368",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "95": {
+                        "draft_result": {
+                            "pick": 96,
+                            "player_key": "nhl.p.6728",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "66": {
+                        "draft_result": {
+                            "pick": 67,
+                            "player_key": "nhl.p.4265",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "194": {
+                        "draft_result": {
+                            "pick": 195,
+                            "player_key": "nhl.p.4248",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "115": {
+                        "draft_result": {
+                            "pick": 116,
+                            "player_key": "nhl.p.4684",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "146": {
+                        "draft_result": {
+                            "pick": 147,
+                            "player_key": "nhl.p.6887",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "94": {
+                        "draft_result": {
+                            "pick": 95,
+                            "player_key": "nhl.p.7534",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "214": {
+                        "draft_result": {
+                            "pick": 215,
+                            "player_key": "nhl.p.6184",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "148": {
+                        "draft_result": {
+                            "pick": 149,
+                            "player_key": "nhl.p.6424",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "235": {
+                        "draft_result": {
+                            "pick": 236,
+                            "player_key": "nhl.p.8004",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "1": {
+                        "draft_result": {
+                            "pick": 2,
+                            "player_key": "nhl.p.5980",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "44": {
+                        "draft_result": {
+                            "pick": 45,
+                            "player_key": "nhl.p.6791",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "23": {
+                        "draft_result": {
+                            "pick": 24,
+                            "player_key": "nhl.p.7908",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "149": {
+                        "draft_result": {
+                            "pick": 150,
+                            "player_key": "nhl.p.6752",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "124": {
+                        "draft_result": {
+                            "pick": 125,
+                            "player_key": "nhl.p.4967",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "85": {
+                        "draft_result": {
+                            "pick": 86,
+                            "player_key": "nhl.p.6369",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "206": {
+                        "draft_result": {
+                            "pick": 207,
+                            "player_key": "nhl.p.4972",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "49": {
+                        "draft_result": {
+                            "pick": 50,
+                            "player_key": "nhl.p.5336",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "205": {
+                        "draft_result": {
+                            "pick": 206,
+                            "player_key": "nhl.p.8641",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "97": {
+                        "draft_result": {
+                            "pick": 98,
+                            "player_key": "nhl.p.4685",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "107": {
+                        "draft_result": {
+                            "pick": 108,
+                            "player_key": "nhl.p.7905",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "169": {
+                        "draft_result": {
+                            "pick": 170,
+                            "player_key": "nhl.p.30546",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "100": {
+                        "draft_result": {
+                            "pick": 101,
+                            "player_key": "nhl.p.6818",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "58": {
+                        "draft_result": {
+                            "pick": 59,
+                            "player_key": "nhl.p.6462",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "36": {
+                        "draft_result": {
+                            "pick": 37,
+                            "player_key": "nhl.p.5161",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "130": {
+                        "draft_result": {
+                            "pick": 131,
+                            "player_key": "nhl.p.5281",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "47": {
+                        "draft_result": {
+                            "pick": 48,
+                            "player_key": "nhl.p.7910",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "119": {
+                        "draft_result": {
+                            "pick": 120,
+                            "player_key": "nhl.p.5685",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "126": {
+                        "draft_result": {
+                            "pick": 127,
+                            "player_key": "nhl.p.5104",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "239": {
+                        "draft_result": {
+                            "pick": 240,
+                            "player_key": "nhl.p.7903",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "57": {
+                        "draft_result": {
+                            "pick": 58,
+                            "player_key": "nhl.p.5096",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "92": {
+                        "draft_result": {
+                            "pick": 93,
+                            "player_key": "nhl.p.5703",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "109": {
+                        "draft_result": {
+                            "pick": 110,
+                            "player_key": "nhl.p.6759",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "88": {
+                        "draft_result": {
+                            "pick": 89,
+                            "player_key": "nhl.p.5697",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "83": {
+                        "draft_result": {
+                            "pick": 84,
+                            "player_key": "nhl.p.7143",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.3"
+                        }
+                    },
+                    "52": {
+                        "draft_result": {
+                            "pick": 53,
+                            "player_key": "nhl.p.6890",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "86": {
+                        "draft_result": {
+                            "pick": 87,
+                            "player_key": "nhl.p.7117",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "61": {
+                        "draft_result": {
+                            "pick": 62,
+                            "player_key": "nhl.p.6476",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "17": {
+                        "draft_result": {
+                            "pick": 18,
+                            "player_key": "nhl.p.6078",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "170": {
+                        "draft_result": {
+                            "pick": 171,
+                            "player_key": "nhl.p.30832",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "90": {
+                        "draft_result": {
+                            "pick": 91,
+                            "player_key": "nhl.p.5010",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "138": {
+                        "draft_result": {
+                            "pick": 139,
+                            "player_key": "nhl.p.6385",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "192": {
+                        "draft_result": {
+                            "pick": 193,
+                            "player_key": "nhl.p.6748",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "48": {
+                        "draft_result": {
+                            "pick": 49,
+                            "player_key": "nhl.p.7156",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "76": {
+                        "draft_result": {
+                            "pick": 77,
+                            "player_key": "nhl.p.3788",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "20": {
+                        "draft_result": {
+                            "pick": 21,
+                            "player_key": "nhl.p.30544",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "152": {
+                        "draft_result": {
+                            "pick": 153,
+                            "player_key": "nhl.p.5689",
+                            "round": 13,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "198": {
+                        "draft_result": {
+                            "pick": 199,
+                            "player_key": "nhl.p.5853",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "213": {
+                        "draft_result": {
+                            "pick": 214,
+                            "player_key": "nhl.p.6494",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "232": {
+                        "draft_result": {
+                            "pick": 233,
+                            "player_key": "nhl.p.30145",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "231": {
+                        "draft_result": {
+                            "pick": 232,
+                            "player_key": "nhl.p.6402",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "111": {
+                        "draft_result": {
+                            "pick": 112,
+                            "player_key": "nhl.p.7636",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "136": {
+                        "draft_result": {
+                            "pick": 137,
+                            "player_key": "nhl.p.6377",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "210": {
+                        "draft_result": {
+                            "pick": 211,
+                            "player_key": "nhl.p.6784",
+                            "round": 18,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "105": {
+                        "draft_result": {
+                            "pick": 106,
+                            "player_key": "nhl.p.6408",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "182": {
+                        "draft_result": {
+                            "pick": 183,
+                            "player_key": "nhl.p.8282",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "127": {
+                        "draft_result": {
+                            "pick": 128,
+                            "player_key": "nhl.p.6038",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "45": {
+                        "draft_result": {
+                            "pick": 46,
+                            "player_key": "nhl.p.3358",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "183": {
+                        "draft_result": {
+                            "pick": 184,
+                            "player_key": "nhl.p.8879",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "81": {
+                        "draft_result": {
+                            "pick": 82,
+                            "player_key": "nhl.p.8290",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "158": {
+                        "draft_result": {
+                            "pick": 159,
+                            "player_key": "nhl.p.8877",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "120": {
+                        "draft_result": {
+                            "pick": 121,
+                            "player_key": "nhl.p.3341",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "67": {
+                        "draft_result": {
+                            "pick": 68,
+                            "player_key": "nhl.p.7535",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "125": {
+                        "draft_result": {
+                            "pick": 126,
+                            "player_key": "nhl.p.5367",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "40": {
+                        "draft_result": {
+                            "pick": 41,
+                            "player_key": "nhl.p.5691",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "43": {
+                        "draft_result": {
+                            "pick": 44,
+                            "player_key": "nhl.p.4901",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "42": {
+                        "draft_result": {
+                            "pick": 43,
+                            "player_key": "nhl.p.8643",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "75": {
+                        "draft_result": {
+                            "pick": 76,
+                            "player_key": "nhl.p.4990",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "140": {
+                        "draft_result": {
+                            "pick": 141,
+                            "player_key": "nhl.p.7516",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "53": {
+                        "draft_result": {
+                            "pick": 54,
+                            "player_key": "nhl.p.5152",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "162": {
+                        "draft_result": {
+                            "pick": 163,
+                            "player_key": "nhl.p.6798",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "69": {
+                        "draft_result": {
+                            "pick": 70,
+                            "player_key": "nhl.p.6367",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "count": 240,
+                    "25": {
+                        "draft_result": {
+                            "pick": 26,
+                            "player_key": "nhl.p.7111",
+                            "round": 3,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "84": {
+                        "draft_result": {
+                            "pick": 85,
+                            "player_key": "nhl.p.7267",
+                            "round": 8,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "2": {
+                        "draft_result": {
+                            "pick": 3,
+                            "player_key": "nhl.p.7109",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "171": {
+                        "draft_result": {
+                            "pick": 172,
+                            "player_key": "nhl.p.5686",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "102": {
+                        "draft_result": {
+                            "pick": 103,
+                            "player_key": "nhl.p.7114",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "74": {
+                        "draft_result": {
+                            "pick": 75,
+                            "player_key": "nhl.p.4472",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "101": {
+                        "draft_result": {
+                            "pick": 102,
+                            "player_key": "nhl.p.8155",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "135": {
+                        "draft_result": {
+                            "pick": 136,
+                            "player_key": "nhl.p.7147",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "41": {
+                        "draft_result": {
+                            "pick": 42,
+                            "player_key": "nhl.p.4474",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "184": {
+                        "draft_result": {
+                            "pick": 185,
+                            "player_key": "nhl.p.7927",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "176": {
+                        "draft_result": {
+                            "pick": 177,
+                            "player_key": "nhl.p.4961",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "191": {
+                        "draft_result": {
+                            "pick": 192,
+                            "player_key": "nhl.p.6379",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "234": {
+                        "draft_result": {
+                            "pick": 235,
+                            "player_key": "nhl.p.6788",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "174": {
+                        "draft_result": {
+                            "pick": 175,
+                            "player_key": "nhl.p.8607",
+                            "round": 15,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "70": {
+                        "draft_result": {
+                            "pick": 71,
+                            "player_key": "nhl.p.7518",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "65": {
+                        "draft_result": {
+                            "pick": 66,
+                            "player_key": "nhl.p.6374",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "226": {
+                        "draft_result": {
+                            "pick": 227,
+                            "player_key": "nhl.p.6337",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.4"
+                        }
+                    },
+                    "116": {
+                        "draft_result": {
+                            "pick": 117,
+                            "player_key": "nhl.p.5454",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "63": {
+                        "draft_result": {
+                            "pick": 64,
+                            "player_key": "nhl.p.4064",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "39": {
+                        "draft_result": {
+                            "pick": 40,
+                            "player_key": "nhl.p.4947",
+                            "round": 4,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "121": {
+                        "draft_result": {
+                            "pick": 122,
+                            "player_key": "nhl.p.8878",
+                            "round": 11,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    },
+                    "59": {
+                        "draft_result": {
+                            "pick": 60,
+                            "player_key": "nhl.p.6762",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.2"
+                        }
+                    },
+                    "13": {
+                        "draft_result": {
+                            "pick": 14,
+                            "player_key": "nhl.p.6744",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "187": {
+                        "draft_result": {
+                            "pick": 188,
+                            "player_key": "nhl.p.7528",
+                            "round": 16,
+                            "team_key": "nhl.l.12345.t.6"
+                        }
+                    },
+                    "165": {
+                        "draft_result": {
+                            "pick": 166,
+                            "player_key": "nhl.p.7163",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "141": {
+                        "draft_result": {
+                            "pick": 142,
+                            "player_key": "nhl.p.7134",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "21": {
+                        "draft_result": {
+                            "pick": 22,
+                            "player_key": "nhl.p.4682",
+                            "round": 2,
+                            "team_key": "nhl.l.12345.t.8"
+                        }
+                    },
+                    "98": {
+                        "draft_result": {
+                            "pick": 99,
+                            "player_key": "nhl.p.8293",
+                            "round": 9,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "196": {
+                        "draft_result": {
+                            "pick": 197,
+                            "player_key": "nhl.p.6766",
+                            "round": 17,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "224": {
+                        "draft_result": {
+                            "pick": 225,
+                            "player_key": "nhl.p.5363",
+                            "round": 19,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "68": {
+                        "draft_result": {
+                            "pick": 69,
+                            "player_key": "nhl.p.5753",
+                            "round": 6,
+                            "team_key": "nhl.l.12345.t.12"
+                        }
+                    },
+                    "134": {
+                        "draft_result": {
+                            "pick": 135,
+                            "player_key": "nhl.p.6405",
+                            "round": 12,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "3": {
+                        "draft_result": {
+                            "pick": 4,
+                            "player_key": "nhl.p.5425",
+                            "round": 1,
+                            "team_key": "nhl.l.12345.t.9"
+                        }
+                    },
+                    "77": {
+                        "draft_result": {
+                            "pick": 78,
+                            "player_key": "nhl.p.5431",
+                            "round": 7,
+                            "team_key": "nhl.l.12345.t.10"
+                        }
+                    },
+                    "50": {
+                        "draft_result": {
+                            "pick": 51,
+                            "player_key": "nhl.p.5020",
+                            "round": 5,
+                            "team_key": "nhl.l.12345.t.7"
+                        }
+                    },
+                    "114": {
+                        "draft_result": {
+                            "pick": 115,
+                            "player_key": "nhl.p.4986",
+                            "round": 10,
+                            "team_key": "nhl.l.12345.t.11"
+                        }
+                    },
+                    "160": {
+                        "draft_result": {
+                            "pick": 161,
+                            "player_key": "nhl.p.6751",
+                            "round": 14,
+                            "team_key": "nhl.l.12345.t.1"
+                        }
+                    },
+                    "233": {
+                        "draft_result": {
+                            "pick": 234,
+                            "player_key": "nhl.p.8292",
+                            "round": 20,
+                            "team_key": "nhl.l.12345.t.5"
+                        }
+                    }
                 }
             }
-        }
+        ],
+        "refresh_rate": "60",
+        "time": "39.87193107605ms",
+        "xml:lang": "en-US",
+        "yahoo:uri": "/fantasy/v2/league/nhl.l.12345/draftresults"
     }
 }

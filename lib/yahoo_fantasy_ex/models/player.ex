@@ -1,97 +1,57 @@
 defmodule YahooFantasyEx.Models.Player do
   @moduledoc false
-  use YahooFantasyEx, :model
 
-  defstruct [
-    :display_position,
-    :editorial_player_key,
-    :editorial_team_abbr,
-    :editorial_team_full_name,
-    :editorial_team_key,
-    :editorial_team_url,
-    :eligible_positions,
-    :has_player_notes,
-    :image_url,
-    :is_keeper,
-    :is_undroppable,
-    :name,
-    :player_advanced_stats,
-    :player_id,
-    :player_key,
-    :player_points,
-    :player_stats,
-    :player_notes_last_timestamp,
-    :position_type,
-    :primary_position,
-    :status,
-    :status_full,
-    :uniform_number,
-    :url
-  ]
+  use YahooFantasyEx.Model,
+    fields: [
+      display_position: :string,
+      editorial_player_key: :string,
+      editorial_team_abbr: :string,
+      editorial_team_full_name: :string,
+      editorial_team_key: :string,
+      editorial_team_url: :string,
+      eligible_positions: {:array, &Player.eligible_positions/1},
+      has_player_notes: :boolean,
+      image_url: :string,
+      is_keeper: &Player.is_keeper/1,
+      is_undroppable: :boolean,
+      name: &Player.name/1,
+      player_id: :integer,
+      player_key: :string,
+      player_notes_last_timestamp: :integer,
+      position_type: &Player.position_type/1,
+      primary_position: &Player.primary_position/1,
+      status_full: :string,
+      url: :string,
+      uniform_number: :integer,
+      status: &Player.status/1,
+      player_advanced_stats: &Player.stats/1,
+      player_points: &Player.points/1,
+      player_stats: &Player.stats/1
+    ]
 
-  @type t :: %__MODULE__{
-          display_position: String.t(),
-          editorial_player_key: String.t(),
-          editorial_team_abbr: String.t(),
-          editorial_team_full_name: String.t(),
-          editorial_team_key: String.t(),
-          editorial_team_url: String.t(),
-          eligible_positions: [atom()],
-          has_player_notes: boolean(),
-          image_url: String.t(),
-          is_keeper: boolean(),
-          is_undroppable: boolean(),
-          name: String.t(),
-          player_advanced_stats: [Stat.t()],
-          player_id: integer() | nil,
-          player_key: String.t(),
-          player_points: float() | nil,
-          player_stats: [Stat.t()],
-          player_notes_last_timestamp: integer() | nil,
-          position_type: atom(),
-          primary_position: atom(),
-          status: atom() | nil,
-          status_full: String.t(),
-          uniform_number: integer() | nil,
-          url: String.t()
-        }
+  alias YahooFantasyEx.Models.Helpers
+  alias YahooFantasyEx.Models.Types.Positions
+  alias YahooFantasyEx.Models.Types.PositionTypes
 
-  @spec new(map() | tuple()) :: t() | nil
-  def new({_, %{"player" => data}}) do
-    data
-    |> flatten_attributes()
-    |> super()
-    |> transform(
-      eligible_positions: &parse_eligible_positions/1,
-      has_player_notes: &cast_boolean/1,
-      is_keeper: &parse_is_keeper/1,
-      is_undroppable: &cast_boolean/1,
-      name: &parse_name/1,
-      player_advanced_stats: &Stat.new/1,
-      player_id: &cast_integer/1,
-      player_notes_last_timestamp: &cast_integer/1,
-      player_points: &parse_player_points/1,
-      player_stats: &Stat.new/1,
-      position_type: &translate_position_type(&1, nil),
-      primary_position: &translate_position/1,
-      status: &translate_status/1,
-      uniform_number: &cast_integer/1
-    )
+  @spec name(map()) :: String.t()
+  def name(%{full: name}), do: name
+
+  @spec eligible_positions(map()) :: atom()
+  def eligible_positions(%{position: position}), do: Positions.translate_position(position)
+
+  def is_keeper(%{kept: is_keeper}), do: is_keeper
+
+  def primary_position(position), do: Positions.translate_position(position)
+
+  def position_type(position_type), do: PositionTypes.translate_position_type(position_type)
+
+  def status(status), do: Helpers.translate_status(status)
+
+  def points(%{total: player_points}), do: cast_float(player_points)
+
+  def stats(%{stats: stats}) do
+    Enum.map(stats, fn %{stat: stat} ->
+      %{stat_id: cast_integer(stat.stat_id), value: cast_float(stat.value)}
+    end)
   end
-
-  def new(_), do: nil
-
-  defp parse_eligible_positions(eligible_positions) when is_list(eligible_positions) do
-    Enum.map(eligible_positions, fn %{"position" => position} -> translate_position(position) end)
-  end
-
-  defp parse_eligible_positions(_), do: nil
-
-  defp parse_is_keeper(%{"kept" => is_keeper}), do: is_keeper
-  defp parse_is_keeper(_), do: nil
-
-  defp parse_name(%{"full" => name}), do: name
-
-  defp parse_player_points(%{"total" => player_points}), do: cast_float(player_points)
-  defp parse_player_points(_), do: nil
 end

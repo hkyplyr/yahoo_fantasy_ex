@@ -35,12 +35,14 @@ defmodule YahooFantasyEx.Models.Types.Positions do
   def translate_position("SG"), do: :shooting_guard
   def translate_position("SF"), do: :small_forward
   def translate_position("PF"), do: :power_forward
+
   def translate_position("IL"), do: :injured_list
   def translate_position("IL+"), do: :injured_list_plus
-
   def translate_position("BN"), do: :bench
   def translate_position("NA"), do: :not_active
   def translate_position("IR"), do: :injured_reserve
   def translate_position("IR+"), do: :injured_reserve_plus
+
+  def translate_position(nil), do: nil
   def translate_position(_), do: :invalid
 end

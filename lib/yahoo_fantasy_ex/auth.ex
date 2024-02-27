@@ -1,20 +1,14 @@
 defmodule YahooFantasyEx.Auth do
   @moduledoc false
 
-  defp client_id, do: System.get_env("CLIENT_ID")
-  defp client_secret, do: System.get_env("CLIENT_SECRET")
+  alias YahooFantasyEx.Tokens
 
   @doc """
   Retrieves the access token to include in the request.
-
-  ## Examples
-
-      iex> YahooFantasyEx.Auth.get_access_token()
-      "access_token"
   """
   @spec get_access_token :: String.t()
   def get_access_token do
-    case token_manager().read() do
+    case Tokens.read() do
       {:ok, binary} ->
         %{
           "access_token" => access_token,
@@ -41,12 +35,9 @@ defmodule YahooFantasyEx.Auth do
 
         %Req.Response{body: body} = Req.post!(url: token_url(), form: data)
 
-        updated =
-          body
-          |> Jason.decode!()
-          |> put_expires_by()
+        updated = put_expires_by(body)
 
-        token_manager().write(updated)
+        Tokens.write(updated)
 
         Map.get(updated, "access_token")
     end
@@ -63,12 +54,9 @@ defmodule YahooFantasyEx.Auth do
 
     %Req.Response{body: body} = Req.post!(url: token_url(), form: data)
 
-    updated =
-      body
-      |> Jason.decode!()
-      |> put_expires_by()
+    updated = put_expires_by(body)
 
-    token_manager().write(updated)
+    Tokens.write(updated)
 
     Map.get(updated, "access_token")
   end
@@ -111,10 +99,8 @@ defmodule YahooFantasyEx.Auth do
     Application.get_env(:yahoo_fantasy_ex, :io, IO)
   end
 
-  defp token_manager do
-    Application.get_env(:yahoo_fantasy_ex, :token_manager, YahooFantasyEx.Tokens.File)
-  end
-
+  defp client_id, do: System.get_env("CLIENT_ID")
+  defp client_secret, do: System.get_env("CLIENT_SECRET")
   defp authorize_url, do: Application.get_env(:yahoo_fantasy_ex, :authorize_url)
   defp token_url, do: Application.get_env(:yahoo_fantasy_ex, :token_url)
 end

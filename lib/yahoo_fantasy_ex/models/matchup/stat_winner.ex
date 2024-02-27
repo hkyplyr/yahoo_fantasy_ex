@@ -21,7 +21,6 @@ defmodule YahooFantasyEx.Models.Matchup.StatWinner do
 
   def new(%{"stat_winner" => data}) do
     data
-    |> super()
     |> transform(
       is_tied: &cast_boolean/1,
       stat_id: &cast_integer/1

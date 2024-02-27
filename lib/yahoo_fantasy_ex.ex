@@ -5,8 +5,6 @@ defmodule YahooFantasyEx do
 
   def model do
     quote do
-      use ExConstructor
-
       import YahooFantasyEx.Models.Helpers
       import YahooFantasyEx.Models.Types.Positions
       import YahooFantasyEx.Models.Types.PositionTypes
@@ -15,7 +13,6 @@ defmodule YahooFantasyEx do
       alias YahooFantasyEx.Models.League.DraftResult
       alias YahooFantasyEx.Models.League.Settings
       alias YahooFantasyEx.Models.League.Settings.RosterPosition
-      alias YahooFantasyEx.Models.League.Settings.StatCategory
       alias YahooFantasyEx.Models.League.Settings.StatModifier
       alias YahooFantasyEx.Models.Manager
       alias YahooFantasyEx.Models.Matchup
