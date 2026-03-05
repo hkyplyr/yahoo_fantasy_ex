@@ -29,10 +29,12 @@ defmodule YahooFantasyEx.MixProject do
   defp deps do
     [
       {:bypass, "~> 2.1", only: :test},
-      {:credo, "~> 1.6.7", only: :dev},
+      {:credo, "~> 1.7.16", only: :dev},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:jason, "~> 1.4"},
-      {:req, "~> 0.4"}
+      {:req, "~> 0.4"},
+      {:ecto_sql, "~> 3.10"},
+      {:ecto_sqlite3, "~> 0.9", optional: true}
     ]
   end
 

@@ -8,21 +8,16 @@ defmodule YahooFantasyEx.Auth do
   """
   @spec get_access_token :: String.t()
   def get_access_token do
-    case Tokens.read() do
-      {:ok, binary} ->
-        %{
-          "access_token" => access_token,
-          "refresh_token" => refresh_token,
-          "expires_by" => expires_by
-        } = Jason.decode!(binary)
+    case Tokens.get() do
+      {:ok, token} ->
+        current_time_with_buffer = DateTime.add(DateTime.utc_now(), 300, :second)
 
-        if DateTime.to_unix(DateTime.utc_now()) > expires_by - 300 do
-          refresh_tokens(refresh_token)
-        else
-          access_token
+        case DateTime.compare(current_time_with_buffer, token.expires_by) do
+          :gt -> refresh_tokens(token.refresh_token)
+          _lt -> token.access_token
         end
 
-      {:error, :enoent} ->
+      :error ->
         code = get_auth_code()
 
         data = [
@@ -37,7 +32,7 @@ defmodule YahooFantasyEx.Auth do
 
         updated = put_expires_by(body)
 
-        Tokens.write(updated)
+        Tokens.put(updated)
 
         Map.get(updated, "access_token")
     end
@@ -56,7 +51,7 @@ defmodule YahooFantasyEx.Auth do
 
     updated = put_expires_by(body)
 
-    Tokens.write(updated)
+    Tokens.put(updated)
 
     Map.get(updated, "access_token")
   end

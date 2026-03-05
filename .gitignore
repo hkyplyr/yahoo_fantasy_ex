@@ -27,3 +27,6 @@ yahoo_fantasy_ex-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Test DB files
+/priv/*.db*

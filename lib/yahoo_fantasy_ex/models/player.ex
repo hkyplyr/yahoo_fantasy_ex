@@ -12,7 +12,7 @@ defmodule YahooFantasyEx.Models.Player do
       eligible_positions: {:array, &Player.eligible_positions/1},
       has_player_notes: :boolean,
       image_url: :string,
-      is_keeper: &Player.is_keeper/1,
+      is_keeper: &Player.keeper?/1,
       is_undroppable: :boolean,
       name: &Player.name/1,
       player_id: :integer,
@@ -39,7 +39,7 @@ defmodule YahooFantasyEx.Models.Player do
   @spec eligible_positions(map()) :: atom()
   def eligible_positions(%{position: position}), do: Positions.translate_position(position)
 
-  def is_keeper(%{kept: is_keeper}), do: is_keeper
+  def keeper?(%{kept: keeper?}), do: keeper?
 
   def primary_position(position), do: Positions.translate_position(position)
 

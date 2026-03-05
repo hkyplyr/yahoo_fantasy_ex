@@ -1,3 +1,4 @@
+YahooFantasyEx.Test.SQLiteRepo.start_link()
 ExUnit.start()
 
 defmodule FakeIO do

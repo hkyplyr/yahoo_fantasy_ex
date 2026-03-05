@@ -1,9 +1,22 @@
 defmodule YahooFantasyEx.Tokens do
-  @moduledoc false
+  @moduledoc """
+  TODO - add moduledoc
+  """
 
-  def read, do: File.read(token_file())
+  @type token :: %{
+          access_token: String.t(),
+          refresh_token: String.t(),
+          expires_by: DateTime.t()
+        }
 
-  def write(value), do: File.write(token_file(), Jason.encode!(value))
+  @callback get :: {:ok, token()} | :error
+  @callback put(token()) :: :ok | :error
 
-  def token_file, do: Application.get_env(:yahoo_fantasy_ex, :token_file)
+  @spec get :: {:ok, token()} | :error
+  def get, do: impl().get()
+
+  @spec put(token()) :: :ok | :error
+  def put(value), do: impl().put(value)
+
+  defp impl, do: Application.fetch_env!(:yahoo_fantasy_ex, :token_module)
 end

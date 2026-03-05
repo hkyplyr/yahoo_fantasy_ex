@@ -29,6 +29,7 @@ defmodule YahooFantasyEx.BaseCase do
   def setup_tokens(ctx) do
     token_file = Path.join(System.tmp_dir!(), "tokens.json")
     Application.put_env(:yahoo_fantasy_ex, :token_file, token_file)
+    Application.put_env(:yahoo_fantasy_ex, :token_module, YahooFantasyEx.Tokens.File)
 
     token_state = Map.get(ctx, :token_state, :valid)
 
@@ -40,24 +41,25 @@ defmodule YahooFantasyEx.BaseCase do
     :ok
   end
 
-  def tokens(:new), do: build_tokens(%{"access_token" => "new_token"})
-  def tokens(:expired), do: build_tokens(%{"expires_by" => 0})
-  def tokens(:refreshed), do: build_tokens(%{"access_token" => "refreshed_token"})
+  def tokens(:new), do: build_tokens(%{access_token: "new_token"})
+  def tokens(:refreshed), do: build_tokens(%{access_token: "refreshed_token"})
+
+  def tokens(:expired) do
+    expires_by = DateTime.add(DateTime.utc_now(), -1, :hour)
+    build_tokens(%{expires_by: expires_by})
+  end
 
   def tokens(:valid) do
-    expires_by =
-      DateTime.utc_now()
-      |> DateTime.to_unix()
-      |> Kernel.+(500)
+    expires_by = DateTime.add(DateTime.utc_now(), 500, :second)
 
-    build_tokens(%{"expires_by" => expires_by})
+    build_tokens(%{expires_by: expires_by})
   end
 
   defp build_tokens(attrs) do
     %{
-      "access_token" => "access_token",
-      "refresh_token" => "refresh_token",
-      "expires_in" => 3600
+      access_token: "access_token",
+      refresh_token: "refresh_token",
+      expires_in: 3600
     }
     |> Map.merge(attrs)
     |> Jason.encode!()
