@@ -9,6 +9,7 @@ defmodule YahooFantasyEx.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      aliases: aliases(),
       test_coverage: [
         ignore_modules: [YahooFantasyEx],
         summary: [
@@ -16,6 +17,10 @@ defmodule YahooFantasyEx.MixProject do
         ]
       ]
     ]
+  end
+
+  def cli do
+    [preferred_envs: ["test.setup": :test]]
   end
 
   # Run "mix help compile.app" to learn about applications.
@@ -40,4 +45,10 @@ defmodule YahooFantasyEx.MixProject do
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
+
+  defp aliases do
+    [
+      "test.setup": ["ecto.create --quiet", "ecto.migrate --quiet"]
+    ]
+  end
 end
