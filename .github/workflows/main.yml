@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Clone the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
 
       - name: Install OTP and Elixir
         uses: erlef/setup-beam@v1
