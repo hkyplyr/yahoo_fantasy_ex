@@ -35,10 +35,9 @@ defmodule YahooFantasyEx.BaseCase do
 
     if token_state != :no_token do
       File.write!(token_file, tokens(token_state))
-      on_exit(fn -> File.rm!(token_file) end)
     end
 
-    :ok
+    on_exit(fn -> File.rm!(token_file) end)
   end
 
   def tokens(:new), do: build_tokens(%{access_token: "new_token"})

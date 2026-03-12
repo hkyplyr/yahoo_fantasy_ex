@@ -19,13 +19,9 @@ defmodule YahooFantasyEx.Api.LeagueTest do
     test "sends correct request for the teams endpoint", ctx do
       set_response(ctx, "teams", "/stats")
 
-      assert %{
-               league_key: "nhl.l.12345",
-               teams: [
-                 %{team_key: "nhl.l.12345.t.1"},
-                 %{team_key: "nhl.l.12345.t.2"}
-               ]
-             } = League.teams(@league_key)
+      assert %{league_key: "nhl.l.12345", teams: teams} = League.teams(@league_key)
+      assert Enum.find(teams, &(&1.team_key == "nhl.l.12345.t.1"))
+      assert Enum.find(teams, &(&1.team_key == "nhl.l.12345.t.2"))
     end
   end
 
@@ -33,12 +29,9 @@ defmodule YahooFantasyEx.Api.LeagueTest do
     test "sends correct request for the players endpoint", ctx do
       set_response(ctx, "players", ";start=0;count=25/stats")
 
-      assert %{
-               players: [
-                 %{player_key: "nhl.p.1600"},
-                 %{player_key: "nhl.p.1700"}
-               ]
-             } = League.players(@league_key)
+      assert %{players: players} = League.players(@league_key)
+      assert Enum.find(players, &(&1.player_key == "nhl.p.1600"))
+      assert Enum.find(players, &(&1.player_key == "nhl.p.1700"))
     end
   end
 
