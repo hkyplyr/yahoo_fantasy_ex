@@ -1,6 +1,7 @@
 defmodule YahooFantasyEx.Api.Client do
   @moduledoc false
 
+  @base_url "https://fantasysports.yahooapis.com/fantasy/v2"
   @params %{format: :json}
 
   alias YahooFantasyEx.Auth
@@ -23,5 +24,5 @@ defmodule YahooFantasyEx.Api.Client do
     body
   end
 
-  defp base_url, do: Application.get_env(:yahoo_fantasy_ex, :base_url)
+  defp base_url, do: Application.get_env(:yahoo_fantasy_ex, :base_url, @base_url)
 end

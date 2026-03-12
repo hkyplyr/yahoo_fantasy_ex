@@ -3,6 +3,9 @@ defmodule YahooFantasyEx.Auth do
 
   alias YahooFantasyEx.Tokens
 
+  @authorize_url "https://api.login.yahoo.com/oauth2/request_auth"
+  @token_url "https://api.login.yahoo.com/oauth2/get_token"
+
   @doc """
   Retrieves the access token to include in the request.
   """
@@ -90,12 +93,10 @@ defmodule YahooFantasyEx.Auth do
     Map.put(token_response, "expires_by", expires_by)
   end
 
-  defp io do
-    Application.get_env(:yahoo_fantasy_ex, :io, IO)
-  end
+  defp io, do: Application.get_env(:yahoo_fantasy_ex, :io, IO)
 
-  defp client_id, do: System.get_env("CLIENT_ID")
-  defp client_secret, do: System.get_env("CLIENT_SECRET")
-  defp authorize_url, do: Application.get_env(:yahoo_fantasy_ex, :authorize_url)
-  defp token_url, do: Application.get_env(:yahoo_fantasy_ex, :token_url)
+  defp client_id, do: Application.fetch_env!(:yahoo_fantasy_ex, :client_id)
+  defp client_secret, do: Application.fetch_env!(:yahoo_fantasy_ex, :client_secret)
+  defp authorize_url, do: Application.get_env(:yahoo_fantasy_ex, :authorize_url, @authorize_url)
+  defp token_url, do: Application.get_env(:yahoo_fantasy_ex, :token_url, @token_url)
 end

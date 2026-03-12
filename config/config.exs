@@ -1,9 +1,7 @@
 import Config
 
 config :yahoo_fantasy_ex,
-  base_url: "https://fantasysports.yahooapis.com/fantasy/v2",
-  authorize_url: "https://api.login.yahoo.com/oauth2/request_auth",
-  token_url: "https://api.login.yahoo.com/oauth2/get_token",
-  token_file: ".tokens.json"
+  client_id: System.get_env("YAHOO_CLIENT_ID"),
+  client_secret: System.get_env("YAHOO_CLIENT_SECRET")
 
 import_config "#{Mix.env()}.exs"

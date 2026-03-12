@@ -4,6 +4,8 @@ defmodule YahooFantasyEx.Tokens.File do
   """
   @behaviour YahooFantasyEx.Tokens
 
+  @token_file ".tokens.json"
+
   @impl YahooFantasyEx.Tokens
   def get do
     with {:ok, binary} <- File.read(token_file()),
@@ -18,5 +20,5 @@ defmodule YahooFantasyEx.Tokens.File do
   @impl YahooFantasyEx.Tokens
   def put(value), do: File.write(token_file(), Jason.encode!(value))
 
-  defp token_file, do: Application.get_env(:yahoo_fantasy_ex, :token_file)
+  defp token_file, do: Application.get_env(:yahoo_fantasy_ex, :token_file, @token_file)
 end
