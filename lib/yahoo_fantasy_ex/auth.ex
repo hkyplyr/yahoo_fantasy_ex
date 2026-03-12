@@ -85,11 +85,7 @@ defmodule YahooFantasyEx.Auth do
   end
 
   defp put_expires_by(%{"expires_in" => expires_in} = token_response) do
-    expires_by =
-      DateTime.utc_now()
-      |> DateTime.to_unix()
-      |> Kernel.+(expires_in)
-
+    expires_by = DateTime.add(DateTime.utc_now(), expires_in, :second)
     Map.put(token_response, "expires_by", expires_by)
   end
 
