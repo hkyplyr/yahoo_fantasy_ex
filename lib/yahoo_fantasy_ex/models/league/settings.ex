@@ -3,8 +3,6 @@ defmodule YahooFantasyEx.Models.League.Settings do
 
   alias YahooFantasyEx.Models.League.Settings
   alias YahooFantasyEx.Models.League.Settings.StatCategory
-  alias YahooFantasyEx.Models.Types.Positions
-  alias YahooFantasyEx.Models.Types.PositionTypes
 
   use YahooFantasyEx.Model,
     fields: [
@@ -50,17 +48,17 @@ defmodule YahooFantasyEx.Models.League.Settings do
       position_type = Map.get(roster_position, :position_type)
 
       value = %{
-        type: PositionTypes.translate_position_type(position_type),
+        type: translate_position_type(position_type),
         count: cast_integer(roster_position.count),
         starting: cast_boolean(roster_position.is_starting_position)
       }
 
-      {Positions.translate_position(roster_position.position), value}
+      {translate_position(roster_position.position), value}
     end)
   end
 
-  def stat_categories(%{stats: stats}, entity, parent) do
-    Enum.map(stats, &StatCategory.build(&1, entity, parent))
+  def stat_categories(%{stats: stats}, _entity, _parent) do
+    Enum.map(stats, &StatCategory.new(&1))
   end
 
   def stat_modifiers(%{stats: stats}) do

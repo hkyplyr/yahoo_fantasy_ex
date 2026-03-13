@@ -17,7 +17,15 @@ defmodule YahooFantasyEx.Models.Decoder do
   end
 
   defp parse({field, type_or_func}, entity, parent \\ nil) do
-    {field, do_parse(type_or_func, Map.get(entity, field), entity, parent)}
+    sub_entity =
+      case entity |> Map.values() |> List.first() do
+        sub_entity when is_map(sub_entity) -> sub_entity
+        _else -> %{}
+      end
+
+    value = Map.get(entity, field) || Map.get(sub_entity, field)
+
+    {field, do_parse(type_or_func, value, entity, parent)}
   end
 
   defp do_parse(function, value, decoded, parent) when is_function(function),
@@ -31,16 +39,11 @@ defmodule YahooFantasyEx.Models.Decoder do
   defp do_parse({:many, module}, value, decoded, _parent),
     do: Subresource.build(value, module, decoded)
 
-  defp do_parse({:one, _module}, nil, _decoded, _parent), do: nil
-
-  defp do_parse({:one, module}, value, decoded, _parent),
-    do: Subresource.build(value, module, decoded)
-
-  defp do_parse({:array, type}, value, _decoded, _parent), do: Primitive.cast_many(type, value)
   defp do_parse(type, value, _decoded, _parent), do: Primitive.cast(type, value)
 
   defp flatten_attributes(attributes) do
     attributes
+    |> List.wrap()
     |> List.flatten()
     |> Enum.reduce(&Map.merge(&1, &2, fn _k, v1, v2 -> v2 ++ v1 end))
   end
@@ -54,18 +57,13 @@ defmodule YahooFantasyEx.Models.Decoder do
     def cast(:date, value), do: Helpers.cast_date(value)
     def cast(:float, value), do: Helpers.cast_float(value)
     def cast(:integer, value), do: Helpers.cast_integer(value)
-    def cast(:string, value), do: value
-
-    def cast_many(type, values), do: Enum.map(values, &cast(type, &1))
+    def cast(:string, value), do: Helpers.cast_string(value)
   end
 
   defmodule Function do
     @moduledoc false
     def apply(function, value, _decoded, _parent) when is_function(function, 1),
       do: function.(value)
-
-    def apply(function, value, decoded, _parent) when is_function(function, 2),
-      do: function.(value, decoded)
 
     def apply(function, value, decoded, parent) when is_function(function, 3),
       do: function.(value, decoded, parent)
@@ -91,6 +89,6 @@ defmodule YahooFantasyEx.Models.Decoder do
       acc ++ [flattened]
     end
 
-    defp flatten(_, acc), do: acc
+    defp flatten(data, acc) when map_size(data) == 1, do: acc ++ Map.values(data)
   end
 end

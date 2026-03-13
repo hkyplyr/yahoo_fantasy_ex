@@ -15,7 +15,7 @@ defmodule YahooFantasyEx.Models.League.Settings.StatCategoryTest do
                position_type: :player,
                sort_order: :desc,
                stat_id: 1
-             } = StatCategory.build(json, nil, nil)
+             } = StatCategory.new(json)
     end
   end
 end

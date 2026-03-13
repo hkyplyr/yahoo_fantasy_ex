@@ -34,5 +34,17 @@ defmodule YahooFantasyEx.Tokens.DatabaseTest do
       assert :ok = Tokens.Database.put(@valid_params)
       assert {:ok, @valid_params} = Tokens.Database.get()
     end
+
+    test "can update token data if one exists" do
+      assert :ok = Tokens.Database.put(@valid_params)
+
+      updated_params = Map.put(@valid_params, :access_token, "new_access_token")
+      assert :ok = Tokens.Database.put(updated_params)
+      assert %Token{access_token: "new_access_token"} = SQLiteRepo.one(Token)
+    end
+
+    test "returns error for invalid params" do
+      assert :error = Tokens.Database.put(%{})
+    end
   end
 end

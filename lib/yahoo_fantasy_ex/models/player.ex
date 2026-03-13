@@ -18,8 +18,8 @@ defmodule YahooFantasyEx.Models.Player do
       player_id: :integer,
       player_key: :string,
       player_notes_last_timestamp: :integer,
-      position_type: &Player.position_type/1,
-      primary_position: &Player.primary_position/1,
+      position_type: &translate_position_type/1,
+      primary_position: &translate_position/1,
       status_full: :string,
       url: :string,
       uniform_number: :integer,
@@ -30,20 +30,14 @@ defmodule YahooFantasyEx.Models.Player do
     ]
 
   alias YahooFantasyEx.Models.Helpers
-  alias YahooFantasyEx.Models.Types.Positions
-  alias YahooFantasyEx.Models.Types.PositionTypes
 
   @spec name(map()) :: String.t()
   def name(%{full: name}), do: name
 
   @spec eligible_positions(map()) :: atom()
-  def eligible_positions(%{position: position}), do: Positions.translate_position(position)
+  def eligible_positions(%{position: position}), do: translate_position(position)
 
   def keeper?(%{kept: keeper?}), do: keeper?
-
-  def primary_position(position), do: Positions.translate_position(position)
-
-  def position_type(position_type), do: PositionTypes.translate_position_type(position_type)
 
   def status(status), do: Helpers.translate_status(status)
 

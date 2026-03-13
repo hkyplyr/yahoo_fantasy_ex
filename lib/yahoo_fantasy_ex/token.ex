@@ -6,8 +6,10 @@ defmodule YahooFantasyEx.Token do
 
   import Ecto.Changeset
 
+  @default_token_id "yahoo_token"
   @required ~w(access_token refresh_token expires_by)a
 
+  @primary_key {:id, :string, default: @default_token_id}
   schema "yahoo_tokens" do
     field(:access_token, :string)
     field(:refresh_token, :string)

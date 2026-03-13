@@ -11,16 +11,12 @@ defmodule YahooFantasyEx.MixProject do
       deps: deps(),
       aliases: aliases(),
       test_coverage: [
-        ignore_modules: [YahooFantasyEx],
+        ignore_modules: [YahooFantasyEx.BaseCase, YahooFantasyEx.Test.SQLiteRepo],
         summary: [
           threshold: 50
         ]
       ]
     ]
-  end
-
-  def cli do
-    [preferred_envs: ["test.setup": :test]]
   end
 
   # Run "mix help compile.app" to learn about applications.
@@ -33,13 +29,13 @@ defmodule YahooFantasyEx.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:bypass, "~> 2.1", only: :test},
-      {:credo, "~> 1.7.16", only: :dev},
-      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:ecto_sql, "~> 3.10"},
+      {:ecto_sqlite3, "~> 0.9", optional: true},
       {:jason, "~> 1.4"},
       {:req, "~> 0.4"},
-      {:ecto_sql, "~> 3.10"},
-      {:ecto_sqlite3, "~> 0.9", optional: true}
+      {:bypass, "~> 2.1", only: :test},
+      {:credo, "~> 1.7.16", only: :dev},
+      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false}
     ]
   end
 
@@ -48,7 +44,7 @@ defmodule YahooFantasyEx.MixProject do
 
   defp aliases do
     [
-      "test.setup": ["ecto.create --quiet", "ecto.migrate --quiet"]
+      test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"]
     ]
   end
 end

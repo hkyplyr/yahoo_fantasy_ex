@@ -27,7 +27,7 @@ defmodule YahooFantasyEx.Tokens.Database do
   defp get_token, do: repo().one(Token)
 
   defp upsert(nil, params), do: repo().insert(Token.changeset(params))
-  defp upsert(token, params), do: repo().insert(Token.changeset(token, params))
+  defp upsert(token, params), do: repo().update(Token.changeset(token, params))
 
   defp repo, do: Application.fetch_env!(:yahoo_fantasy_ex, :repo)
 end

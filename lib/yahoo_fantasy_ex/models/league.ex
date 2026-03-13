@@ -16,11 +16,11 @@ defmodule YahooFantasyEx.Models.League do
       league_key: :string,
       league_type: :atom,
       league_update_timestamp: :integer,
-      logo_url: &League.logo_url/1,
+      logo_url: :string,
       name: :string,
       num_teams: :integer,
-      renew: &League.renew_key/1,
-      renewed: &League.renew_key/1,
+      renew: &build_renew_key/1,
+      renewed: &build_renew_key/1,
       scoring_type: :atom,
       season: :integer,
       short_invitation_url: :string,
@@ -32,12 +32,4 @@ defmodule YahooFantasyEx.Models.League do
       players: {:many, YahooFantasyEx.Models.Player},
       teams: {:many, YahooFantasyEx.Models.Team}
     ]
-
-  @spec logo_url(String.t() | boolean()) :: String.t() | nil
-  def logo_url(false), do: nil
-  def logo_url(logo_url), do: logo_url
-
-  @spec renew_key(String.t()) :: String.t() | nil
-  def renew_key(""), do: nil
-  def renew_key(renew_key), do: String.replace(renew_key, "_", ".l.")
 end

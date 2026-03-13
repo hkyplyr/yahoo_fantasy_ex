@@ -29,4 +29,7 @@ yahoo_fantasy_ex-*.tar
 /tmp/
 
 # Test DB files
-/priv/*.db*
+/priv/
+
+# Elixir LS files
+.elixir_ls

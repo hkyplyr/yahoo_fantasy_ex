@@ -6,14 +6,10 @@ defmodule YahooFantasyEx.Api.League do
   alias YahooFantasyEx.Models.League
 
   @spec info(String.t()) :: League.t()
-  def info(league_key) do
-    get("/league/#{league_key}/metadata")
-  end
+  def info(league_key), do: get("/league/#{league_key}/metadata")
 
   @spec teams(String.t()) :: League.t()
-  def teams(league_key) do
-    get("/league/#{league_key}/teams/stats")
-  end
+  def teams(league_key), do: get("/league/#{league_key}/teams/stats")
 
   @spec players(String.t(), Keyword.t()) :: League.t()
   def players(league_key, opts \\ []) do
@@ -24,14 +20,10 @@ defmodule YahooFantasyEx.Api.League do
   end
 
   @spec settings(String.t()) :: League.t()
-  def settings(league_key) do
-    get("/league/#{league_key}/settings")
-  end
+  def settings(league_key), do: get("/league/#{league_key}/settings")
 
   @spec transactions(String.t()) :: League.t()
-  def transactions(league_key) do
-    get("/league/#{league_key}/transactions")
-  end
+  def transactions(league_key), do: get("/league/#{league_key}/transactions")
 
   @spec scoreboard(String.t(), Keyword.t()) :: League.t()
   def scoreboard(league_key, opts \\ []) do
@@ -47,19 +39,8 @@ defmodule YahooFantasyEx.Api.League do
     get("/league/#{league_key}/scoreboard#{weeks_param}")
   end
 
-  @spec draft_results(String.t(), Keyword.t()) :: League.t()
-  def draft_results(league_key, opts \\ []) do
-    include_players? = Keyword.get(opts, :include_players?, false)
-
-    url = "/league/#{league_key}/draftresults"
-
-    if include_players?, do: get("#{url}/players"), else: get(url)
-  end
-
-  @spec standings(String.t()) :: League.t()
-  def standings(league_key) do
-    get("/league/#{league_key}/standings")
-  end
+  @spec draft_results(String.t()) :: League.t()
+  def draft_results(league_key), do: get("/league/#{league_key}/draftresults")
 
   defp get(url) do
     url |> Client.get!() |> Parser.parse()
