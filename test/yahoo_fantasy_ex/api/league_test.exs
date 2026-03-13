@@ -11,7 +11,7 @@ defmodule YahooFantasyEx.Api.LeagueTest do
     test "sends correct request for the metadata ednpoint", ctx do
       set_response(ctx, "metadata")
 
-      assert %{league_key: "nhl.l.12345"} = League.info(@league_key)
+      assert %{league_key: "nfl.l.12345"} = League.info(@league_key)
     end
   end
 
@@ -19,9 +19,9 @@ defmodule YahooFantasyEx.Api.LeagueTest do
     test "sends correct request for the teams endpoint", ctx do
       set_response(ctx, "teams", "/stats")
 
-      assert %{league_key: "nhl.l.12345", teams: teams} = League.teams(@league_key)
-      assert Enum.find(teams, &(&1.team_key == "nhl.l.12345.t.1"))
-      assert Enum.find(teams, &(&1.team_key == "nhl.l.12345.t.2"))
+      assert %{league_key: "nfl.l.12345", teams: teams} = League.teams(@league_key)
+      assert Enum.find(teams, &(&1.team_key == "nfl.l.12345.t.1"))
+      assert Enum.find(teams, &(&1.team_key == "nfl.l.12345.t.2"))
     end
   end
 

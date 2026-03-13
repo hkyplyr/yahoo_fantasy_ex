@@ -25,10 +25,10 @@ defmodule YahooFantasyEx.Models.League.Settings do
       playoff_start_week: :integer,
       post_draft_players: :atom,
       roster_import_deadline: :date,
-      roster_positions: &Settings.roster_positions/1,
+      roster_positions: {:many, YahooFantasyEx.Models.League.Settings.RosterPosition},
       scoring_type: :atom,
       sendbird_channel_url: :string,
-      stat_categories: &Settings.stat_categories/3,
+      stat_categories: {:many, YahooFantasyEx.Models.League.Settings.StatCategory},
       stat_modifiers: &Settings.stat_modifiers/1,
       trade_end_date: :date,
       trade_ratify_type: :atom,
@@ -42,20 +42,6 @@ defmodule YahooFantasyEx.Models.League.Settings do
       waiver_time: :integer,
       waiver_type: :atom
     ]
-
-  def roster_positions(roster_positions) do
-    Map.new(roster_positions, fn %{roster_position: roster_position} ->
-      position_type = Map.get(roster_position, :position_type)
-
-      value = %{
-        type: translate_position_type(position_type),
-        count: cast_integer(roster_position.count),
-        starting: cast_boolean(roster_position.is_starting_position)
-      }
-
-      {translate_position(roster_position.position), value}
-    end)
-  end
 
   def stat_categories(%{stats: stats}, _entity, _parent) do
     Enum.map(stats, &StatCategory.new(&1))

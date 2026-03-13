@@ -25,6 +25,11 @@ defmodule YahooFantasyEx.Models.Decoder do
 
     value = Map.get(entity, field) || Map.get(sub_entity, field)
 
+    # IO.inspect("------------------------------------------------")
+    # IO.inspect(field, label: :field)
+    # IO.inspect(type_or_func, label: :type_or_func)
+    # IO.inspect(entity, label: :entity)
+
     {field, do_parse(type_or_func, value, entity, parent)}
   end
 
@@ -89,6 +94,14 @@ defmodule YahooFantasyEx.Models.Decoder do
       acc ++ [flattened]
     end
 
+    defp flatten({_, data}, acc) when is_list(data) do
+      flattened = Enum.reduce(data, acc, &flatten/2)
+
+      acc ++ flattened
+    end
+
     defp flatten(data, acc) when map_size(data) == 1, do: acc ++ Map.values(data)
+
+    defp flatten(_, acc), do: acc
   end
 end

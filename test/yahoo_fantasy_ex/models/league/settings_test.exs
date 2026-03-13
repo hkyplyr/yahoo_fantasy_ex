@@ -40,127 +40,58 @@ defmodule YahooFantasyEx.Models.League.SettingsTest do
                waiver_rule: :all,
                waiver_time: 2,
                waiver_type: :FR,
-               roster_positions: %{
-                 center: %{type: :player, count: 2, starting: true},
-                 left_wing: %{type: :player, count: 2, starting: true},
-                 right_wing: %{type: :player, count: 2, starting: true},
-                 forward: %{type: :player, count: 2, starting: true},
-                 defense: %{type: :player, count: 4, starting: true},
-                 goalie: %{type: :goalie, count: 2, starting: true},
-                 bench: %{type: nil, count: 6, starting: false},
-                 injured_reserve: %{type: nil, count: 2, starting: false},
-                 injured_reserve_plus: %{type: nil, count: 3, starting: false}
-               },
-               stat_categories: [
+               roster_positions: [
                  %{
-                   abbr: "G",
-                   enabled: true,
-                   group: :offense,
-                   name: "Goals",
+                   position: :center,
                    position_type: :player,
-                   sort_order: :desc,
-                   stat_id: 1
+                   count: 2,
+                   is_starting_position: true
                  },
                  %{
-                   abbr: "A",
-                   enabled: true,
-                   group: :offense,
-                   name: "Assists",
+                   position: :left_wing,
                    position_type: :player,
-                   sort_order: :desc,
-                   stat_id: 2
+                   count: 2,
+                   is_starting_position: true
                  },
                  %{
-                   abbr: "PPP",
-                   enabled: true,
-                   group: :offense,
-                   name: "Powerplay Points",
+                   position: :right_wing,
                    position_type: :player,
-                   sort_order: :desc,
-                   stat_id: 8
+                   count: 2,
+                   is_starting_position: true
                  },
                  %{
-                   abbr: "SHP",
-                   enabled: true,
-                   group: :offense,
-                   name: "Shorthanded Points",
+                   position: :forward,
                    position_type: :player,
-                   sort_order: :desc,
-                   stat_id: 11
+                   count: 2,
+                   is_starting_position: true
                  },
                  %{
-                   abbr: "SOG",
-                   enabled: true,
-                   group: :offense,
-                   name: "Shots on Goal",
+                   position: :defense,
                    position_type: :player,
-                   sort_order: :desc,
-                   stat_id: 14
+                   count: 4,
+                   is_starting_position: true
                  },
                  %{
-                   abbr: "HIT",
-                   enabled: true,
-                   group: :offense,
-                   name: "Hits",
-                   position_type: :player,
-                   sort_order: :desc,
-                   stat_id: 31
-                 },
-                 %{
-                   abbr: "BLK",
-                   enabled: true,
-                   group: :offense,
-                   name: "Blocks",
-                   position_type: :player,
-                   sort_order: :desc,
-                   stat_id: 32
-                 },
-                 %{
-                   abbr: "W",
-                   enabled: true,
-                   group: :goaltending,
-                   name: "Wins",
+                   position: :goalie,
                    position_type: :goalie,
-                   sort_order: :desc,
-                   stat_id: 19
+                   count: 2,
+                   is_starting_position: true
+                 },
+                 %{position: :bench, position_type: nil, count: 6, is_starting_position: false},
+                 %{
+                   position: :injured_reserve,
+                   position_type: nil,
+                   count: 2,
+                   is_starting_position: false
                  },
                  %{
-                   abbr: "L",
-                   enabled: true,
-                   group: :goaltending,
-                   name: "Losses",
-                   position_type: :goalie,
-                   sort_order: :asc,
-                   stat_id: 20
-                 },
-                 %{
-                   abbr: "GA",
-                   enabled: true,
-                   group: :goaltending,
-                   name: "Goals Against",
-                   position_type: :goalie,
-                   sort_order: :asc,
-                   stat_id: 22
-                 },
-                 %{
-                   abbr: "SV",
-                   enabled: true,
-                   group: :goaltending,
-                   name: "Saves",
-                   position_type: :goalie,
-                   sort_order: :desc,
-                   stat_id: 25
-                 },
-                 %{
-                   abbr: "SHO",
-                   enabled: true,
-                   group: :goaltending,
-                   name: "Shutouts",
-                   position_type: :goalie,
-                   sort_order: :desc,
-                   stat_id: 27
+                   position: :injured_reserve_plus,
+                   position_type: nil,
+                   count: 3,
+                   is_starting_position: false
                  }
                ],
+               stat_categories: _stat_categories,
                stat_modifiers: %{
                  1 => 3.5,
                  2 => 2.5,

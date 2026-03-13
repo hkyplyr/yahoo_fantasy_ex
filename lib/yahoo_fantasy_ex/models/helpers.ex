@@ -35,7 +35,7 @@ defmodule YahooFantasyEx.Models.Helpers do
   def cast_atom(value), do: String.to_existing_atom(value)
 
   @spec cast_atom!(String.t() | nil) :: atom() | nil
-  def cast_atom!(nil), do: nil
+  def cast_atom!(value) when value in @nil_values, do: nil
   def cast_atom!(value), do: String.to_atom(value)
 
   @spec cast_date(term() | nil) :: Date.t() | nil
@@ -45,6 +45,7 @@ defmodule YahooFantasyEx.Models.Helpers do
   @spec translate_sort_order(String.t()) :: :asc | :desc
   def translate_sort_order("1"), do: :desc
   def translate_sort_order("0"), do: :asc
+  def translate_sort_order(_any), do: nil
 
   @spec translate_status(term()) :: term() | nil
   def translate_status("NA"), do: :not_active
